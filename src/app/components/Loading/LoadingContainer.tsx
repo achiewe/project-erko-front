@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import LoadingGif from "../../../../public/video.gif";
+import LoadingGif from "../../../../public/assets/video.gif";
 import { setIsLoading } from "@/app/redux/features/IsLoadingSlice";
 import Image from "next/image";
 
