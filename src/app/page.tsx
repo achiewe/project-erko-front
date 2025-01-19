@@ -10,15 +10,17 @@ export default function Home() {
     (store: RootState) => store.isLoading.isLoading
   );
   return (
-    <div className="flex flex-col w-full h-screen bg-[#d9d9d9]">
+    <main className="flex flex-col w-full h-screen bg-[#d9d9d9]">
       {isLoading ? (
         <LoadingContainer />
       ) : (
         <>
           <Header />
-          <PageList />
+          <main className="flex px-[15px] py-[15px] w-full">
+            <PageList />
+          </main>
         </>
       )}
-    </div>
+    </main>
   );
 }
