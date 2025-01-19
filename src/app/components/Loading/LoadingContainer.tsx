@@ -16,8 +16,8 @@ export default function LoadingContainer() {
     return () => clearTimeout(timer); // Cleanup timeout
   }, []);
   return (
-    <div className="flex justify-center items-center absolute top-[50%] bottom-[50%]">
-      <Image src={LoadingGif} alt="loading gif" width={200} height={200} /> asas
+    <div className="flex w-full justify-center items-center absolute top-[50%] bottom-[50%]">
+      <Image src={LoadingGif} alt="loading gif" width={200} height={200} />
     </div>
   );
 }

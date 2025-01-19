@@ -10,7 +10,7 @@ export default function Home() {
     (store: RootState) => store.isLoading.isLoading
   );
   return (
-    <div className="flex w-full h-screen bg-[#d9d9d9]">
+    <div className="flex flex-col w-full h-screen bg-[#d9d9d9]">
       {isLoading ? (
         <LoadingContainer />
       ) : (
