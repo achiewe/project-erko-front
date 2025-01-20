@@ -6,7 +6,7 @@ import PageList from "./components/pageList/pageList";
 export default function Home() {
   return (
     <main className="flex flex-col w-full h-screen bg-[#EEEEEE]">
-      <main className="flex px-[15px] pt-[60px] w-full">
+      <main className="flex px-[15px] pt-[30px] w-full">
         <PageList />
         <LoadingContainer />
       </main>
