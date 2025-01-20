@@ -4,7 +4,7 @@ import lightPng from "../../../../public/assets/light.png";
 
 export default function CreativityTxtDiv() {
   return (
-    <div className="flex flex-col w-full justify-center items-center">
+    <div className="flex flex-col w-full justify-center items-center mb-[60px]">
       <Image src={lightPng} alt="light png" />
       <p className="text-[15px] text-center">
         Creativity isn’t thinking outside the box; it’s realising the box was
