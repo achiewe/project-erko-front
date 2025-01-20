@@ -1,26 +1,17 @@
 "use client";
-import { useSelector } from "react-redux";
 import Header from "./components/Header/Header";
-import { RootState } from "./redux/features/store";
 import LoadingContainer from "./components/Loading/LoadingContainer";
+// import LoadingContainer from "./components/Loading/LoadingContainer";
 import PageList from "./components/pageList/pageList";
 
 export default function Home() {
-  const isLoading = useSelector(
-    (store: RootState) => store.isLoading.isLoading
-  );
   return (
     <main className="flex flex-col w-full h-screen bg-[#d9d9d9]">
-      {isLoading ? (
+      <Header />
+      <main className="flex px-[15px] py-[15px] w-full">
+        <PageList />
         <LoadingContainer />
-      ) : (
-        <>
-          <Header />
-          <main className="flex px-[15px] py-[15px] w-full">
-            <PageList />
-          </main>
-        </>
-      )}
+      </main>
     </main>
   );
 }
