@@ -14,11 +14,7 @@ export default function LoadingContainer() {
       </h1>
       <GifButtonDiv />
       <CreativityTxtDiv />
-      <Image
-        src={anyDeskPng}
-        alt="any desk png"
-        className="max-w-[90%] h-auto"
-      />
+      <Image src={anyDeskPng} alt="any desk png" className="fixed bottom-10" />
     </div>
   );
 }
