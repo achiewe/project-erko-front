@@ -1,7 +1,12 @@
 export default function Header() {
   return (
-    <header className="w-full bg-white px-[15px] py-[30px]">
-      <h1 className="text-[black] text-[50px]">ERKO Panel</h1>
+    <header className="w-full bg-white py-[10px]">
+      <nav className="w-full flex flex-row justify-center items-center gap-[15px]">
+        <button className="relative underline-button">File</button>
+        <button className="relative underline-button">View</button>
+        <button className="relative underline-button">Surprise</button>
+        <button className="relative underline-button">Help</button>
+      </nav>
     </header>
   );
 }
