@@ -12,10 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily:{
-        myfont: ['MyFont']
+      fontFamily: {
+        myfont: ['MyFont'],
+      },
+      screens: {
+        'h-sm': { 'raw': '(max-height: 500px)' }, 
       },
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config
