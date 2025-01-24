@@ -20,7 +20,7 @@ export default function LoadingContainer() {
       <Image
         src={anyDeskPng}
         alt="any desk png"
-        className="fixed bottom-10 h-sm:bottom-30"
+        className="fixed bottom-10 h-sm:bottom-20"
       />
     </div>
   );
