@@ -17,7 +17,7 @@ function GifButtonDiv() {
         alt="loading gif"
         width={150}
         height={150}
-        className="h-sm:h-[100px] h-sm:w-[100px]"
+        className="h-sm:h-[200px] h-sm:w-[200px]"
       />
       <button
         onClick={() => {
