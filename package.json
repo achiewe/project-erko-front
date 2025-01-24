@@ -6,10 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postcss:watch": "postcss styles.css -o output.css --watch"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
+    "autoprefixer": "^10.4.20",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -22,8 +24,14 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
-    "postcss": "^8",
+    "postcss": "^8.5.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "> 0.5%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
