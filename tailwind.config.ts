@@ -16,7 +16,7 @@ export default {
         myfont: ['MyFont'],
       },
       screens: {
-        'h-sm': { 'raw': '(max-height: 500px)' }, 
+        'h-sm': { 'raw': '(max-height: 600px)' }, 
       },
     },
   },
