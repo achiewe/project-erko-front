@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function LoadingContainer() {
   return (
     <div
-      className="flex flex-col w-full h-full h-sm:gap-[5px] h-sm:h-[600px] justify-start items-center gap-[40px] bg-[#FFFFF0] 
+      className="flex flex-col w-full h-full h-sm:gap-[15px] h-sm:h-[550px] justify-start items-center gap-[40px] bg-[#FFFFF0] 
     border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] pt-[30px]"
     >
       <h1 className="text-[36px] font-bold sm:text-[32px] text-center h-sm:text-[24px]">
@@ -20,7 +20,7 @@ export default function LoadingContainer() {
       <Image
         src={anyDeskPng}
         alt="any desk png"
-        className="fixed bottom-10 h-sm:bottom-40"
+        className="fixed bottom-10 h-sm:bottom-30"
       />
     </div>
   );
