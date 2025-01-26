@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 // state type
 export interface DropDownProps {
@@ -14,12 +14,12 @@ const DropDownSlice = createSlice({
   name: "isDropDown",
   initialState,
   reducers: {
-    setDropDown: (state, action: PayloadAction<boolean>) => {
-      state.isDropDown = action.payload;
+    setIsDropDown: (state) => {
+      state.isDropDown = !state.isDropDown;
     },
   },
 });
 
 //export setState
-export const { setDropDown } = DropDownSlice.actions;
+export const { setIsDropDown } = DropDownSlice.actions;
 export default DropDownSlice.reducer;
