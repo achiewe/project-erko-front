@@ -8,7 +8,7 @@ import HeaderOptionBtn from "./HeaderOptionBtn";
 export default function Header() {
   const dispatch = useDispatch();
   return (
-    <header className="w-full bg-white py-[10px] border-b-[2px] border-black shadow-lg">
+    <header className="w-full bg-white py-[5px] border-b-[2px] border-black shadow-lg">
       <nav className="w-full flex flex-row justify-start items-center gap-[20px] pl-[15px] relative">
         <Image src={erkoLogo} alt="erko logo" />
         <HeaderOptionBtn
