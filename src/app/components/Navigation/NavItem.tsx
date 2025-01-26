@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { JSX } from "react";
 
 interface NavItemProps {
@@ -8,10 +9,18 @@ interface NavItemProps {
 }
 
 export function NavItem({ href, label }: NavItemProps): JSX.Element {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
   return (
     <li
-      className="w-[69px] h-[30px] bg-[white] flex justify-center items-center border-r-[0.5px] border-b-[1.9px] 
-      border-gray-800 shadow-[0px_1px_0px_rgba(0,0,0,0.5)]"
+      className={`w-[69px] h-[30px] flex justify-center items-center 
+        ${
+          isActive
+            ? "shadow-[0px_1px_0px_rgba(0,0,0,0.2)] border-r-[0.5px] border-gray-800"
+            : "border-r-[0.5px] border-b-[1.9px] border-gray-800 shadow-[0px_1px_0px_rgba(0,0,0,0.5)]"
+        }
+        bg-white`}
     >
       <Link href={href} className="text-black text-[20px]">
         {label}
