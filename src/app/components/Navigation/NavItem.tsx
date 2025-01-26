@@ -18,7 +18,7 @@ export function NavItem({ href, label }: NavItemProps): JSX.Element {
         ${
           isActive
             ? "shadow-[0px_1px_0px_rgba(0,0,0,0.2)] border-r-[0.5px] border-gray-800"
-            : "border-r-[0.5px] border-b-[1.9px] border-gray-800 shadow-[0px_1px_0px_rgba(0,0,0,0.5)]"
+            : "border-r-[0.5px] border-b-[1.9px] border-gray-800 shadow-[0px_1px_0px_rgba(0,0,0,0.6)]"
         }
         bg-white`}
     >
