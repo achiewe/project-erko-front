@@ -17,7 +17,8 @@ export default {
       },
       screens: {
         'h-sm': { 'raw': '(max-height: 800px)' }, 
-        'h-mm': { 'raw': '(max-height: 600px)' }, 
+        'h-mm': { 'raw': '(max-height: 680px)' }, 
+        'h-mn': { 'raw': '(max-height: 600px)' },
       },
     },
   },
