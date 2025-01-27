@@ -20,6 +20,10 @@ export default {
         'h-mm': { 'raw': '(max-height: 680px)' }, 
         'h-mn': { 'raw': '(max-height: 600px)' },
       },
+      textDecorationThickness: {
+        1: '0.5px',
+        2: '1px',
+      },
     },
   },
   plugins: [],
