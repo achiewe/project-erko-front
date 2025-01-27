@@ -12,7 +12,13 @@ function GifButtonDiv() {
   const router = useRouter();
   return (
     <div className="flex flex-col w-full justify-center items-center gap-[10px]">
-      <Image src={LoadingGif} alt="loading gif" width={150} height={150} />
+      <Image
+        src={LoadingGif}
+        alt="loading gif"
+        width={150}
+        height={150}
+        unoptimized
+      />
       <button
         onClick={() => {
           dispatch(setIsLoading(true));
