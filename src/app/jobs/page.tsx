@@ -7,8 +7,10 @@ export default function page() {
   return (
     <div>
       <Header />
-      <NavigationPages />
-      <JobsMainContainer />
+      <div className="flex px-[5px] w-full h-full items-start flex-col">
+        <NavigationPages />
+        <JobsMainContainer />
+      </div>
     </div>
   );
 }
