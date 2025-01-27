@@ -18,7 +18,8 @@ export default {
       screens: {
         'h-sm': { 'raw': '(max-height: 800px)' }, 
         'h-mm': { 'raw': '(max-height: 680px)' }, 
-        'h-mn': { 'raw': '(max-height: 600px)' },
+        'h-mn': { 'raw': '(max-height: 660px)' },
+        'h-ml': { 'raw': '(max-height: 560px)' },
       },
       textDecorationThickness: {
         1: '0.5px',
