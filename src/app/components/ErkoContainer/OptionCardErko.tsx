@@ -21,7 +21,7 @@ export default function OptionCardErko({
         <Image
           src={imageSrc}
           alt={title}
-          className="h-[120px] h-sm:h-[90px] h-sm:w-[100px]"
+          className="h-[110px] h-sm:h-[90px] h-sm:w-[100px] h-mm:h-[80px] h-mm:w-[90px]"
         />
         <h3 className="text-center text-[18px]">{title}</h3>
       </Link>
