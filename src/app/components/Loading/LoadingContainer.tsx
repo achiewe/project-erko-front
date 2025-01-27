@@ -3,7 +3,7 @@
 import React from "react";
 import GifButtonDiv from "./GifButtonDiv";
 import CreativityTxtDiv from "./CreativityTxtDiv";
-import anyDeskPng from "../../../../public/anyDesk.png";
+import anyDeskPng from "../../../../public/assets/anyDesk.png";
 import Image from "next/image";
 
 export default function LoadingContainer() {

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import LoadingGif from "../../../../public/video.gif";
+import LoadingGif from "../../../../public/assets/video.gif";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { setIsLoading } from "@/app/redux/features/IsLoadingSlice";

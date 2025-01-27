@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import OptionCardErko from "./OptionCardErko";
-import teamPng from "../../../../public/Team.png";
-import socialsPng from "../../../../public/socials.png";
-import startupPng from "../../../../public/startup.png";
-import freeMusicPng from "../../../../public/freeMusic.png";
-import regionalPng from "../../../../public/regional.png";
-import documentsPng from "../../../../public/documents.png";
-import archivePng from "../../../../public/archive.png";
+import teamPng from "../../../../public/assets/Team.png";
+import socialsPng from "../../../../public/assets/socials.png";
+import startupPng from "../../../../public/assets/startup.png";
+import freeMusicPng from "../../../../public/assets/freeMusic.png";
+import regionalPng from "../../../../public/assets/regional.png";
+import documentsPng from "../../../../public/assets/documents.png";
+import archivePng from "../../../../public/assets/archive.png";
 
 export default function MainErkoContainer() {
   return (
