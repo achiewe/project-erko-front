@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import lightPng from "../../../../public/assets/light.png";
+import lightPng from "../../../../public/light.png";
 
 export default function CreativityTxtDiv() {
   return (

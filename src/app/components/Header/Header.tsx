@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import erkoLogo from "../../../../public/assets/erkoLogo.png";
+import erkoLogo from "../../../../public/erkoLogo.png";
 import DropDownMenu from "./DropDownMenu";
 import { useDispatch } from "react-redux";
 import { setIsDropDown } from "@/app/redux/features/DropDownSlice";
