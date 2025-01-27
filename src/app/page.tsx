@@ -9,7 +9,7 @@ export default function Home() {
   //   (store: RootState) => store.isLoading.isLoading
   // );
   return (
-    <main className="flex flex-col w-full h-screen bg-[#EEEEEE]">
+    <main className="flex flex-col w-full h-screen bg-[#EEEEEE] overflow-hidden">
       <div className="flex px-[15px] py-[30px] w-full h-screen items-start overflow-hidden">
         <LoadingContainer />
       </div>
