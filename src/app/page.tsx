@@ -1,13 +1,17 @@
 "use client";
-// import { useSelector } from "react-redux";
+import { useEffect } from "react";
 import LoadingContainer from "./components/Loading/LoadingContainer";
-// import { RootState } from "./redux/features/store";
-// import Link from "next/link";
 
 export default function Home() {
-  // const isLoading = useSelector(
-  //   (store: RootState) => store.isLoading.isLoading
-  // );
+  useEffect(() => {
+    // Set body overflow to hidden when loading page appears
+    document.body.style.overflow = "hidden";
+
+    // Clean up when the page transition completes (when you leave the loading page)
+    return () => {
+      document.body.style.overflow = "auto"; // Allow scrolling again
+    };
+  }, []);
   return (
     <main className="flex flex-col w-full h-screen bg-[#EEEEEE] overflow-hidden">
       <div className="flex px-[15px] py-[30px] w-full h-screen items-start overflow-hidden">
