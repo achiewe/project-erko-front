@@ -1,7 +1,6 @@
 // components/GameBoard.tsx
 "use client";
 import { useState } from "react";
-
 import {
   checkWinner,
   bestMove,
@@ -42,7 +41,7 @@ const GameBoard: React.FC = () => {
 
     const computerWinner = checkWinner(newBoard);
     if (computerWinner === COMPUTER) {
-      setGameStatus("Erko wins!");
+      setGameStatus("Erko wins!"); // You can customize the computer's win message
       return;
     }
     if (computerWinner === "draw") {

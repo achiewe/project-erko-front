@@ -29,13 +29,37 @@ export const checkWinner = (board: string[]): string | null => {
   return null;
 };
 
+
 export const bestMove = (board: string[]): number => {
-  // Example AI logic for making the best move
-  // In real-world scenarios, you might want to use a more sophisticated AI algorithm
-  for (let i = 0; i < board.length; i++) {
-    if (board[i] === EMPTY) {
-      return i; // Returns the first available spot for simplicity
+    // Check if the computer can win
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === EMPTY) {
+        board[i] = COMPUTER;
+        if (checkWinner(board) === COMPUTER) {
+          return i; // Return the winning move
+        }
+        board[i] = EMPTY; // Reset the move if it's not a winning move
+      }
     }
-  }
-  return -1;
-};
+  
+    // Check if the player can win, and block them
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === EMPTY) {
+        board[i] = PLAYER;
+        if (checkWinner(board) === PLAYER) {
+          return i; // Block the player from winning
+        }
+        board[i] = EMPTY; // Reset the move if it's not a blocking move
+      }
+    }
+  
+    // If no immediate win or block, pick the best available move (you can implement smarter strategies here)
+    // For simplicity, return the first empty spot
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === EMPTY) {
+        return i;
+      }
+    }
+  
+    return -1; // Return -1 if no moves are available (should not happen in a valid game)
+  };
