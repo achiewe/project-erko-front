@@ -16,7 +16,8 @@ export default {
         myfont: ['MyFont'],
       },
       screens: {
-        'h-sm': { 'raw': '(max-height: 800px)' }, 
+        'h-sm': { 'raw': '(max-height: 800px)' },
+        'h-sv': { 'raw': '(max-height: 760px)' },  
         'h-mm': { 'raw': '(max-height: 680px)' }, 
         'h-mn': { 'raw': '(max-height: 660px)' },
         'h-mw': { 'raw': '(max-height: 600px)' },
