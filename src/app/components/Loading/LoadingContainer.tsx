@@ -21,6 +21,8 @@ export default function LoadingContainer() {
         src={anyDeskPng}
         alt="any desk png"
         className="absolute bottom-10 h-sm:bottom-20"
+        width={131}
+        height={24}
       />
     </div>
   );

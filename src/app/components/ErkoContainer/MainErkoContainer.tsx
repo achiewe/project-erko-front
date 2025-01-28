@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import OptionCardErko from "./OptionCardErko";
-import teamPng from "../../../../public/assets/Team.png";
+import teamPng from "../../../../public/assets/team.png";
 import socialsPng from "../../../../public/assets/socials.png";
 import startupPng from "../../../../public/assets/startup.png";
 import freeMusicPng from "../../../../public/assets/freeMusic.png";
@@ -12,7 +12,7 @@ import archivePng from "../../../../public/assets/archive.png";
 export default function MainErkoContainer() {
   return (
     <div
-      className="flex mt-[1px] flex-row items-center justify-center w-full h-screen 
+      className="flex mt-[1px] flex-row items-center pr-[20px] justify-end w-full h-screen 
       gap-y-[20px] h-mm:gap-y-[5px] h-mn:gap-y-[0px] flex-wrap gap-x-[50px] bg-[#FFFFF0] 
     border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] h-mn:py-[0px] relative"
     >
