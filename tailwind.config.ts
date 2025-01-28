@@ -19,6 +19,7 @@ export default {
         'h-sm': { 'raw': '(max-height: 800px)' }, 
         'h-mm': { 'raw': '(max-height: 680px)' }, 
         'h-mn': { 'raw': '(max-height: 660px)' },
+        'h-mw': { 'raw': '(max-height: 600px)' },
         'h-ml': { 'raw': '(max-height: 560px)' },
       },
     },
