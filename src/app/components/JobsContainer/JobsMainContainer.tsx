@@ -21,57 +21,53 @@ border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)]
       <OptionCardErko
         title="Developer"
         imageSrc={developerPng}
-        link="/jobs/developer"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Assistant"
         imageSrc={assistantPng}
-        link="/jobs/assistant"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Advertiser"
         imageSrc={advertiserPng}
-        link="/jobs/advertiser"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Meme Maker"
         imageSrc={memeMakerPng}
-        link="/jobs/meme-maker"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Graphic Designer"
         imageSrc={designerPng}
-        link="/jobs/graphic-designer"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Video Editor"
         imageSrc={editorPng}
-        link="/jobs/video-editor"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Student Internship"
         imageSrc={intershipPng}
-        link="/jobs/student-internship"
+        link="/jobs/form"
       />
-      <OptionCardErko
-        title="Sales God"
-        imageSrc={salesPng}
-        link="/jobs/sales-god"
-      />
+      <OptionCardErko title="Sales God" imageSrc={salesPng} link="/jobs/form" />
       <OptionCardErko
         title="3D Artist"
         imageSrc={DArtistPng}
-        link="/jobs/3D-artist"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Content Strategist"
         imageSrc={strategistPng}
-        link="/jobs/content-strategist"
+        link="/jobs/form"
       />
       <OptionCardErko
         title="Creative Mind"
         imageSrc={creativePng}
-        link="/jobs/creative-mind"
+        link="/jobs/form"
       />
     </div>
   );
