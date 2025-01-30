@@ -63,3 +63,46 @@ export const bestMove = (board: string[]): number => {
   
     return -1; // Return -1 if no moves are available (should not happen in a valid game)
   };
+
+
+  export const handleCellClick = (
+    index: number,
+    board: string[],
+    isPlayerTurn: boolean,
+    setBoard: (board: string[]) => void,
+    setGameStatus: (status: string) => void,
+    setIsPlayerTurn: (turn: boolean) => void
+  ): void => {
+    if (board[index] !== EMPTY || !isPlayerTurn) return;
+  
+    const newBoard = [...board];
+    newBoard[index] = PLAYER;
+    setBoard(newBoard);
+    setIsPlayerTurn(false);
+  
+    const winner = checkWinner(newBoard);
+    if (winner === PLAYER) {
+      setGameStatus("You win!");
+      return;
+    }
+    if (winner === "draw") {
+      setGameStatus("It's a draw!");
+      return;
+    }
+  
+    const computerMove = bestMove(newBoard);
+    newBoard[computerMove] = COMPUTER;
+    setBoard(newBoard);
+  
+    const computerWinner = checkWinner(newBoard);
+    if (computerWinner === COMPUTER) {
+      setGameStatus("Erko wins!");
+      return;
+    }
+    if (computerWinner === "draw") {
+      setGameStatus("It's a draw!");
+      return;
+    }
+  
+    setIsPlayerTurn(true);
+  };
