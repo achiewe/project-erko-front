@@ -9,7 +9,7 @@ export default function Header() {
   const dispatch = useDispatch();
   return (
     <header className="w-full bg-white py-[5px] border-b-[1.9px] border-black shadow-[0px_1px_0px_rgba(0,0,0,0.5)] mb-[10px]">
-      <nav className="w-full flex flex-row justify-start items-center gap-[20px] pl-[15px] relative">
+      <nav className="w-full flex flex-row justify-start items-center gap-[20px] pl-[15px]">
         <Image
           src={erkoLogo}
           alt="erko logo"
@@ -20,11 +20,21 @@ export default function Header() {
         <HeaderOptionBtn
           text="File"
           onClick={() => {
-            dispatch(setIsDropDown());
+            dispatch(setIsDropDown("File"));
           }}
         />
-        <HeaderOptionBtn text="View" />
-        <HeaderOptionBtn text="Surprise" />
+        <HeaderOptionBtn
+          text="View"
+          onClick={() => {
+            dispatch(setIsDropDown("View"));
+          }}
+        />
+        <HeaderOptionBtn
+          text="Surprise"
+          onClick={() => {
+            dispatch(setIsDropDown("Surprise"));
+          }}
+        />
         <HeaderOptionBtn text="Help" />
         <DropDownMenu />
       </nav>
