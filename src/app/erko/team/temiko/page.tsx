@@ -9,7 +9,7 @@ export default function page() {
     <div className="w-full min-h-screen bg-[#EEEEE]">
       <Header />
       <div className="flex px-[5px] w-full h-full items-start flex-col pb-[10px]">
-        <BackButton />
+        <BackButton destination="/erko/team" />
         <MemberCard
           title="About temiko"
           imageSrc={TemikoPxl}
