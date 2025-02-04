@@ -8,7 +8,7 @@ export default function page() {
   return (
     <div className="w-full min-h-screen bg-[#EEEEE]">
       <Header />
-      <div className="flex px-[5px] w-full h-screen items-start flex-col pb-[10px]">
+      <div className="flex px-[5px] w-full h-full items-start flex-col pb-[10px]">
         <BackButton />
         <MemberCard
           title="About temiko"
