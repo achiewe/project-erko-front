@@ -22,39 +22,44 @@ export default function GameBoard() {
   };
 
   return (
-    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col gap-6 relative">
-      <Image
-        src={ErkoLogo}
-        alt="erko logo"
-        width={84}
-        height={80}
-        className="absolute top-4 h-sv:top-2 h-sv:w-[70px] h-sv:h-[60px] h-mm:w-[50px] h-mm:h-[40px] "
-      />
-      <div className="grid grid-cols-3 gap-1 mb-4">
-        {board.map((value, index) => (
-          <Cell
-            key={index}
-            value={value}
-            onClick={() =>
-              handleCellClick(
-                index,
-                board,
-                isPlayerTurn,
-                setBoard,
-                setGameStatus,
-                setIsPlayerTurn
-              )
-            }
-            index={index}
-          />
-        ))}
+    <div className="flex px-[5px] w-full h-screen items-start flex-col py-[10px] bg-[#EEEEEE]">
+      <div
+        className="flex mt-[1px] flex-col items-center justify-center w-full h-full 
+  gap-y-[0px] gap-x-[30px] bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
+      >
+        <Image
+          src={ErkoLogo}
+          alt="erko logo"
+          width={84}
+          height={80}
+          className="absolute top-4 h-sv:top-2 h-sv:w-[70px] h-sv:h-[60px] h-mm:w-[50px] h-mm:h-[40px] "
+        />
+        <div className="grid grid-cols-3 gap-1 mb-4">
+          {board.map((value, index) => (
+            <Cell
+              key={index}
+              value={value}
+              onClick={() =>
+                handleCellClick(
+                  index,
+                  board,
+                  isPlayerTurn,
+                  setBoard,
+                  setGameStatus,
+                  setIsPlayerTurn
+                )
+              }
+              index={index}
+            />
+          ))}
+        </div>
+        <GameStatus status={gameStatus} />
+        <div className="flex flex-row items-center justify-center gap-[15px]">
+          <BackButton destination="/erko" />
+          <ResetButton onReset={resetGame} />
+        </div>
+        <CreativityTxtDiv text="Crush Erko in XO, snap your winning shot, and score an epic gift or discount on our services" />
       </div>
-      <GameStatus status={gameStatus} />
-      <div className="flex flex-row items-center justify-center gap-[15px]">
-        <BackButton destination="/erko" />
-        <ResetButton onReset={resetGame} />
-      </div>
-      <CreativityTxtDiv text="Crush Erko in XO, snap your winning shot, and score an epic gift or discount on our services" />
     </div>
   );
 }
