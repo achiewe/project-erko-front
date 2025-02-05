@@ -5,6 +5,7 @@ import { EMPTY, handleCellClick } from "../../utils/tictactoeLogic";
 import Cell from "./Cell";
 import GameStatus from "./GameStatus";
 import ResetButton from "./ResetButton";
+import BackButton from "../MemberCard/BackButton";
 
 export default function GameBoard() {
   const [board, setBoard] = useState<string[]>(Array(9).fill(EMPTY));
@@ -39,7 +40,10 @@ export default function GameBoard() {
         ))}
       </div>
       <GameStatus status={gameStatus} />
-      <ResetButton onReset={resetGame} />
+      <div className="flex flex-row items-center justify-center gap-[15px]">
+        <BackButton destination="/erko" />
+        <ResetButton onReset={resetGame} />
+      </div>
     </div>
   );
 }
