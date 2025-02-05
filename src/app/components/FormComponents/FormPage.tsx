@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userSchema } from "@/app/utils/validationSchema";
+import { useSubmitForm } from "@/app/hooks/useSubmitForm";
 
 export default function FormPage() {
   const {
@@ -15,9 +16,16 @@ export default function FormPage() {
     mode: "onChange",
   });
 
-  const onSubmit = (data: object) => {
-    console.log(data);
+  const { submitForm } = useSubmitForm();
+
+  const onSubmit = async (data: object) => {
+    const result = await submitForm(data);
+    console.log(result);
   };
+
+  // const onSubmit = (data: object) => {
+  //   console.log(data);
+  // };
 
   return (
     <form

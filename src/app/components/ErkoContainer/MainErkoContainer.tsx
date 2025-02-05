@@ -7,7 +7,8 @@ import startupPng from "../../../../public/assets/startup.png";
 import freeMusicPng from "../../../../public/assets/freeMusic.png";
 import regionalPng from "../../../../public/assets/regional.png";
 import documentsPng from "../../../../public/assets/documents.png";
-import archivePng from "../../../../public/assets/archive.png";
+// import archivePng from "../../../../public/assets/archive.png";
+import Image from "next/image";
 
 export default function MainErkoContainer() {
   return (
@@ -41,11 +42,10 @@ export default function MainErkoContainer() {
         imageSrc={documentsPng}
         link="/erko/documents"
       />
-      <OptionCardErko
-        title="Archive"
-        imageSrc={archivePng}
-        link="erko/archive"
-      />
+      <a href="https://www.google.ge/" target="_blank">
+        <Image src={socialsPng} alt="socials" width={150} height={150} />
+        <h3 className="text-center text-[20px]"> Socials</h3>
+      </a>
     </div>
   );
 }
