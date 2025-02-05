@@ -90,19 +90,26 @@ export const bestMove = (board: string[]): number => {
       return;
     }
   
-    const computerMove = bestMove(newBoard);
-    newBoard[computerMove] = COMPUTER;
-    setBoard(newBoard);
+    // Update game status to indicate it's the computer's turn
+    setGameStatus("Erko is thinking...");
   
-    const computerWinner = checkWinner(newBoard);
-    if (computerWinner === COMPUTER) {
-      setGameStatus("Erko wins!");
-      return;
-    }
-    if (computerWinner === "draw") {
-      setGameStatus("It's a draw!");
-      return;
-    }
+    // Introduce a delay before the computer makes its move
+    setTimeout(() => {
+      const computerMove = bestMove(newBoard);
+      newBoard[computerMove] = COMPUTER;
+      setBoard(newBoard);
   
-    setIsPlayerTurn(true);
+      const computerWinner = checkWinner(newBoard);
+      if (computerWinner === COMPUTER) {
+        setGameStatus("Erko wins!");
+        return;
+      }
+      if (computerWinner === "draw") {
+        setGameStatus("It's a draw!");
+        return;
+      }
+  
+      setIsPlayerTurn(true);
+      setGameStatus("Your turn");
+    }, 3000); 
   };

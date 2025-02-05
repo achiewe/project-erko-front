@@ -22,7 +22,7 @@ export default function GameBoard() {
   };
 
   return (
-    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col gap-5 relative">
+    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col gap-6 relative">
       <Image
         src={ErkoLogo}
         alt="erko logo"
