@@ -6,6 +6,8 @@ import Cell from "./Cell";
 import GameStatus from "./GameStatus";
 import ResetButton from "./ResetButton";
 import BackButton from "../MemberCard/BackButton";
+import ErkoLogo from "../../../../public/assets/erkoLLogo.png";
+import Image from "next/image";
 
 export default function GameBoard() {
   const [board, setBoard] = useState<string[]>(Array(9).fill(EMPTY));
@@ -19,7 +21,14 @@ export default function GameBoard() {
   };
 
   return (
-    <div className="max-w-sm mx-auto text-center">
+    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col">
+      <Image
+        src={ErkoLogo}
+        alt="erko logo"
+        width={84}
+        height={80}
+        className="fixed top-20 h-sv:top-10 h-mn:top-5 h-mw:w-[60px] h-ml:w-[40px]"
+      />
       <div className="grid grid-cols-3 gap-1 mb-4">
         {board.map((value, index) => (
           <Cell
