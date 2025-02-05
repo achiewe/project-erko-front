@@ -17,7 +17,7 @@ export default function LoadingContainer() {
         Welcome to Erko
       </h1>
       <GifButtonDiv />
-      <CreativityTxtDiv />
+      <CreativityTxtDiv text="Creativity isn’t thinking outside the box; it’s realising the box was never there to begin with." />
       <Image
         src={anyDeskPng}
         alt="any desk png"

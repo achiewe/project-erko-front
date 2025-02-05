@@ -8,6 +8,7 @@ import ResetButton from "./ResetButton";
 import BackButton from "../MemberCard/BackButton";
 import ErkoLogo from "../../../../public/assets/erkoLLogo.png";
 import Image from "next/image";
+import CreativityTxtDiv from "../Loading/CreativityTxtDiv";
 
 export default function GameBoard() {
   const [board, setBoard] = useState<string[]>(Array(9).fill(EMPTY));
@@ -21,13 +22,13 @@ export default function GameBoard() {
   };
 
   return (
-    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col">
+    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col gap-5">
       <Image
         src={ErkoLogo}
         alt="erko logo"
         width={84}
         height={80}
-        className="fixed top-20 h-sv:top-10 h-mn:top-5 h-mw:w-[60px] h-ml:w-[40px]"
+        className="fixed top-4 h-sv:top-2 h-sv:w-[70px] h-sv:h-[60px] h-mm:w-[50px] h-mm:h-[40px]"
       />
       <div className="grid grid-cols-3 gap-1 mb-4">
         {board.map((value, index) => (
@@ -53,6 +54,7 @@ export default function GameBoard() {
         <BackButton destination="/erko" />
         <ResetButton onReset={resetGame} />
       </div>
+      <CreativityTxtDiv text="Crush Erko in XO, snap your winning shot, and score an epic gift or discount on our services" />
     </div>
   );
 }

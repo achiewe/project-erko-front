@@ -5,5 +5,9 @@ interface GameStatusProps {
 }
 
 export default function GameStatus({ status }: GameStatusProps) {
-  return <div className="text-2xl mb-4">{status}</div>;
+  return (
+    <p className="text-2xl mb-4 w-full flex justify-center items-center">
+      {status}
+    </p>
+  );
 }
