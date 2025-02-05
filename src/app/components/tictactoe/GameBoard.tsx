@@ -22,13 +22,13 @@ export default function GameBoard() {
   };
 
   return (
-    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col gap-5">
+    <div className="max-w-sm mx-auto text-center h-screen flex justify-center items-center flex-col gap-5 relative">
       <Image
         src={ErkoLogo}
         alt="erko logo"
         width={84}
         height={80}
-        className="fixed top-4 h-sv:top-2 h-sv:w-[70px] h-sv:h-[60px] h-mm:w-[50px] h-mm:h-[40px]"
+        className="absolute top-4 h-sv:top-2 h-sv:w-[70px] h-sv:h-[60px] h-mm:w-[50px] h-mm:h-[40px] "
       />
       <div className="grid grid-cols-3 gap-1 mb-4">
         {board.map((value, index) => (
