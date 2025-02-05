@@ -16,7 +16,7 @@ export default function SocialsInfo({
     <a
       href={profileUrl}
       target="_blank"
-      className="flex flex-col items-center justify-center gap-[5px]"
+      className="flex flex-col items-center justify-center gap-[5px] cursor-pointer"
     >
       <Image src={imageSrc} alt={title} />
       <h3 className="text-[22px]">{title}</h3>
