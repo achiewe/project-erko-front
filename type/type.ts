@@ -1,15 +1,18 @@
-interface userFormData {
+interface FormDataType {
     name: string;
     email: string;
-    phone?: string;
-    telegram?: string;
-    instagram?: string;
+    phone?: string | null;
+    telegram?: string | null;
+    instagram?: string | null;
     about: string;
     resonate: "yes" | "no";
-    resume: File | null;
-    additionalMedia?: File | null;
+    resume: FileList;
+    additionalMedia?: FileList | null;
     privacy: boolean;
-};
+    [key: string]: string | FileList | null | boolean | undefined;
+  };
+  
+  
 
 
-export default userFormData;
+export default FormDataType;
