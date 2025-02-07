@@ -90,11 +90,23 @@ export const bestMove = (board: string[]): number => {
       return;
     }
   
-    // Update game status to indicate it's the computer's turn
+    // Step 1: Show first message
     setGameStatus("Erko is thinking...");
   
-    // Introduce a delay before the computer makes its move
     setTimeout(() => {
+      // Step 2: Randomly decide whether to show "Oh shit, it's difficult..."
+      if (Math.random() > 0.5) { 
+        setGameStatus("Oh shit, it's difficult...");
+  
+        setTimeout(() => {
+          performComputerMove();
+        }, 2000); // Move after additional 2 seconds (total 5 seconds)
+      } else {
+        performComputerMove(); // Skip extra message and move at 3 seconds
+      }
+    }, 3000); // First status change after 3 seconds
+  
+    function performComputerMove() {
       const computerMove = bestMove(newBoard);
       newBoard[computerMove] = COMPUTER;
       setBoard(newBoard);
@@ -111,5 +123,5 @@ export const bestMove = (board: string[]): number => {
   
       setIsPlayerTurn(true);
       setGameStatus("Your turn");
-    }, 3000); 
+    }
   };
