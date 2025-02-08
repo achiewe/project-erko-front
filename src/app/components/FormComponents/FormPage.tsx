@@ -4,7 +4,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { userSchema } from "@/app/utils/validationSchema";
 import { useSubmitForm } from "@/app/hooks/useSubmitForm";
 import { useRouter } from "next/navigation";
-// import FormDataType from "../../../../type/type";
 import * as yup from "yup";
 
 export default function FormPage() {
