@@ -6,7 +6,7 @@ import advertiserPng from "../../../../public/assets/advertiser.png";
 import memeMakerPng from "../../../../public/assets/memeMaker.png";
 import designerPng from "../../../../public/assets/designer.png";
 import editorPng from "../../../../public/assets/editor.png";
-import intershipPng from "../../../../public/assets/intership.png";
+import intershipPng from "../../../../public/assets/internship.png";
 import salesPng from "../../../../public/assets/sales.png";
 import DArtistPng from "../../../../public/assets/3DArtist.png";
 import strategistPng from "../../../../public/assets/strategist.png";
