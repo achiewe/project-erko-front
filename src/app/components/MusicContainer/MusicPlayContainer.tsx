@@ -1,5 +1,7 @@
 import React from "react";
 
 export default function MusicPlayContainer() {
-  return <div className="w-full bg-[#F3F3F3] felx flex-col gap-[30px]"></div>;
+  return (
+    <div className="w-full h-[200px] bg-[#F3F3F3] drop-shadow-[2px_4px_2px_rgba(0,0,0,0.3)] flex flex-col gap-[30px] border-black border-2"></div>
+  );
 }
