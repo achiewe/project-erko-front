@@ -1,5 +1,6 @@
 import React from "react";
 import MusicPlayContainer from "./MusicPlayContainer";
+import SpotifyImage from "./SpotifyImage";
 
 export default function MusicContainer() {
   return (
@@ -9,6 +10,8 @@ export default function MusicContainer() {
     >
       <h3 className="text-[30px]">Enjoy some of our selections!</h3>
       <MusicPlayContainer />
+      <SpotifyImage top="1" right="1" />
+      <SpotifyImage bottom="1" left="1" />
     </div>
   );
 }
