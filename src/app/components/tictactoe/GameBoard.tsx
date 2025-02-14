@@ -24,10 +24,10 @@ export default function GameBoard() {
     <div className="flex px-[5px] w-full h-screen items-start flex-col py-[10px] bg-[#EEEEEE]">
       <div
         className="flex mt-[1px] flex-col items-center justify-start w-full h-full 
-  gap-y-[15px] gap-x-[30px] bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
+  gap-y-[25px] gap-x-[30px] bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
       >
         <SmileTxt />
-        <div className="grid grid-cols-3 gap-1 mb-4">
+        <div className="grid grid-cols-3 gap-1 mb-4 px-[10px] py-[22px] rounded-xl bg-[#F3F3F3] border-black border-2">
           {board.map((value, index) => (
             <Cell
               key={index}
