@@ -6,9 +6,8 @@ import Cell from "./Cell";
 import GameStatus from "./GameStatus";
 import ResetButton from "./ResetButton";
 import BackButton from "../MemberCard/BackButton";
-import ErkoLogo from "../../../../public/assets/erkoLLogo.png";
-import Image from "next/image";
 import CreativityTxtDiv from "../Loading/CreativityTxtDiv";
+import SmileTxt from "./SmileTxt";
 
 export default function GameBoard() {
   const [board, setBoard] = useState<string[]>(Array(9).fill(EMPTY));
@@ -24,16 +23,10 @@ export default function GameBoard() {
   return (
     <div className="flex px-[5px] w-full h-screen items-start flex-col py-[10px] bg-[#EEEEEE]">
       <div
-        className="flex mt-[1px] flex-col items-center justify-center w-full h-full 
-  gap-y-[0px] gap-x-[30px] bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
+        className="flex mt-[1px] flex-col items-center justify-start w-full h-full 
+  gap-y-[15px] gap-x-[30px] bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
       >
-        <Image
-          src={ErkoLogo}
-          alt="erko logo"
-          width={84}
-          height={80}
-          className="absolute top-4 h-sv:top-2 h-sv:w-[70px] h-sv:h-[60px] h-mm:w-[50px] h-mm:h-[40px] "
-        />
+        <SmileTxt />
         <div className="grid grid-cols-3 gap-1 mb-4">
           {board.map((value, index) => (
             <Cell
