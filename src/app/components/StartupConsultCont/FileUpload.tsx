@@ -1,3 +1,4 @@
+"use client";
 import { FieldError, UseFormRegister } from "react-hook-form";
 
 interface FileUploadProps {
