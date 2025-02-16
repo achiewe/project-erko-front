@@ -17,7 +17,7 @@ export default function StartupFormContainer() {
     resolver: yupResolver(formSchema),
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: Record<string, unknown>) => {
     console.log("Form Data:", data);
     setSubmitted(true);
   };
@@ -39,63 +39,82 @@ export default function StartupFormContainer() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col w-full h-full px-4 gap-4"
           >
-            <FormField
-              label="Full Name"
-              name="fullName"
-              register={register}
-              error={errors.fullName}
-            />
-            <FormField
-              label="Email"
-              name="email"
-              type="email"
-              register={register}
-              error={errors.email}
-            />
-            <FormField
-              label="Phone"
-              name="phone"
-              register={register}
-              error={errors.phone}
-            />
-            <FormField
-              label="Country"
-              name="country"
-              register={register}
-              error={errors.country}
-            />
+            {/* Full Name */}
+            <div>
+              <label className="block font-medium">Full Name</label>
+              <input
+                {...register("fullName")}
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+              />
+              <p className="text-red-500 text-sm">{errors.fullName?.message}</p>
+            </div>
 
-            {/* Textarea Fields */}
+            {/* Email */}
+            <div>
+              <label className="block font-medium">Email</label>
+              <input
+                type="email"
+                {...register("email")}
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+              />
+              <p className="text-red-500 text-sm">{errors.email?.message}</p>
+            </div>
+
+            {/* Phone */}
+            <div>
+              <label className="block font-medium">Phone</label>
+              <input
+                {...register("phone")}
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+              />
+              <p className="text-red-500 text-sm">{errors.phone?.message}</p>
+            </div>
+
+            {/* Country */}
+            <div>
+              <label className="block font-medium">Country</label>
+              <input
+                {...register("country")}
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+              />
+              <p className="text-red-500 text-sm">{errors.country?.message}</p>
+            </div>
+
+            {/* About Your Startup */}
             <div>
               <label className="block font-medium">About Your Startup</label>
               <textarea
                 {...register("aboutYourStartup")}
                 className="w-full pl-2 border border-black outline-none h-20 rounded-md"
               ></textarea>
-              {errors.aboutYourStartup && (
-                <p className="text-red-500 text-sm">
-                  {errors.aboutYourStartup.message}
-                </p>
-              )}
+              <p className="text-red-500 text-sm">
+                {errors.aboutYourStartup?.message}
+              </p>
             </div>
 
+            {/* Why You? */}
             <div>
               <label className="block font-medium">Why You?</label>
               <textarea
                 {...register("whyYou")}
                 className="w-full pl-2 border border-black outline-none h-20 rounded-md"
               ></textarea>
-              {errors.whyYou && (
-                <p className="text-red-500 text-sm">{errors.whyYou.message}</p>
-              )}
+              <p className="text-red-500 text-sm">{errors.whyYou?.message}</p>
             </div>
 
-            {/* File Upload Fields */}
-            <FileUpload
-              label="Project Presentation (Optional)"
-              name="projectPresentation"
-              register={register}
-            />
+            {/* Project Presentation (Optional) */}
+            <div>
+              <label className="block font-medium">
+                Project Presentation (Optional)
+              </label>
+              <input
+                type="file"
+                {...register("projectPresentation")}
+                className="w-full"
+              />
+            </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
               className="bg-blue-600 text-white px-4 py-2 rounded-md"
