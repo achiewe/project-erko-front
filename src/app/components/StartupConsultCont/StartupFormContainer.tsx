@@ -3,8 +3,6 @@ import { formSchema } from "@/app/utils/consultingSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import FormField from "./FormField";
-import FileUpload from "./FileUpload";
 import InfoBanner from "./InfoBanner";
 
 export default function StartupFormContainer() {
