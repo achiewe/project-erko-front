@@ -1,15 +1,9 @@
-"use client";
 import { setOpenModal } from "@/app/redux/features/ModalOpenSlice";
-import { RootState } from "@/app/redux/features/store";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 export default function ModalButton() {
   const dispatch = useDispatch();
-  const openModal = useSelector(
-    (store: RootState) => store.openModal.openModal
-  );
-  console.log(openModal);
   return (
     <button
       onClick={() => {
