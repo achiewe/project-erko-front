@@ -21,7 +21,7 @@ export default function GameBoard() {
   };
 
   return (
-    <div className="flex px-[5px] w-full h-screen items-start flex-col py-[10px] bg-[#EEEEEE]">
+    <div className="flex px-[5px] w-full h-full items-start flex-col py-[10px] bg-[#EEEEEE]">
       <div
         className="flex mt-[1px] flex-col items-center justify-start w-full h-full 
   gap-y-[25px] gap-x-[30px] bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
