@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import lightPng from "../../../../public/assets/light bulb.png";
+import lightPng from "../../../public/assets/light bulb.png";
 
 interface CreativityTxtProps {
   text: string;

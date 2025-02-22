@@ -6,7 +6,7 @@ import Cell from "./Cell";
 import GameStatus from "./GameStatus";
 import ResetButton from "./ResetButton";
 import BackButton from "../../shared/BackButton";
-import CreativityTxtDiv from "../Loading/CreativityTxtDiv";
+import CreativityTxtDiv from "../../shared/CreativityTxtDiv";
 import SmileTxt from "./SmileTxt";
 
 export default function GameBoard() {

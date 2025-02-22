@@ -2,7 +2,7 @@
 
 import React from "react";
 import GifButtonDiv from "./GifButtonDiv";
-import CreativityTxtDiv from "./CreativityTxtDiv";
+import CreativityTxtDiv from "../../shared/CreativityTxtDiv";
 import anyDeskPng from "../../../../public/assets/anyDesk.png";
 import Image from "next/image";
 
