@@ -9,8 +9,11 @@ import regionalPng from "../../../../public/assets/regional.png";
 import documentsPng from "../../../../public/assets/documents.png";
 import archivePng from "../../../../public/assets/archive.png";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { setOpenModal } from "@/app/redux/features/ModalOpenSlice";
 
 export default function MainErkoContainer() {
+  const dispatch = useDispatch();
   return (
     <div
       className="flex mt-[1px] flex-row items-center justify-start w-full h-full sm:justify-center 
@@ -26,6 +29,9 @@ export default function MainErkoContainer() {
         title="Startup Consulting"
         imageSrc={startupPng}
         link="/erko/consulting"
+        onClick={() => {
+          dispatch(setOpenModal(true));
+        }}
       />
       <OptionCardErko
         title="Free Music"
@@ -36,6 +42,9 @@ export default function MainErkoContainer() {
         title="Regional Properties"
         imageSrc={regionalPng}
         link="/erko/regional"
+        onClick={() => {
+          dispatch(setOpenModal(true));
+        }}
       />
       <OptionCardErko
         title="Documents"

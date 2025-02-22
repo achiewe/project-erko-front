@@ -8,16 +8,22 @@ interface OptionCardProps {
   title: string;
   imageSrc: StaticImageData;
   link: string;
+  onClick?: () => void;
 }
 
 export default function OptionCardErko({
   title,
   imageSrc,
   link,
+  onClick,
 }: OptionCardProps) {
   return (
     <div className="w-[150px]">
-      <Link href={link} className="flex justify-center items-center flex-col">
+      <Link
+        href={link}
+        className="flex justify-center items-center flex-col"
+        onClick={onClick}
+      >
         <Image
           src={imageSrc}
           alt={title}
