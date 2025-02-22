@@ -9,5 +9,5 @@ export const formSchema = yup.object({
     country: yup.string().required("Country is required"),
     aboutYourStartup: yup.string().required("This field is required"),
     whyYou: yup.string().required("This field is required"),
-    projectPresentation: yup.mixed().nullable(), // Optional file upload
+    projectPresentation: yup.mixed<FileList>().notRequired(), // Optional file upload
   });

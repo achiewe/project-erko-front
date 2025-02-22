@@ -1,4 +1,5 @@
-interface FormDataType {
+import * as yup from "yup";
+export interface FormDataType {
     name: string;
     email: string;
     phone?: string | null;
@@ -13,6 +14,13 @@ interface FormDataType {
   };
   
   
+export interface StartupFormData{
+  fullName: string;
+  email: string;
+  phone: string;
+  country: string;
+  aboutYourStartup: string;
+  whyYou: string;
+  projectPresentation?: yup.Maybe<FileList | undefined>;
+}
 
-
-export default FormDataType;

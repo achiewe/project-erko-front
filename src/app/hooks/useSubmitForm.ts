@@ -1,5 +1,6 @@
 import { useState } from "react";
-import FormDataType from "../../../type/type";
+import { FormDataType } from "../../../type/type";
+
 
 
 export function useSubmitForm() {

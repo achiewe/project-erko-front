@@ -1,15 +1,19 @@
 "use client";
 import { formSchema } from "@/app/utils/consultingSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import InfoBanner from "./InfoBanner";
 import InfoModal from "@/app/shared/InfoModal";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/redux/features/store";
+import { useSubmitStartupForm } from "@/app/hooks/useSubmitStartupForm";
+import { useRouter } from "next/navigation";
+import * as yup from "yup";
 
 export default function StartupFormContainer() {
-  const [submitted, setSubmitted] = useState<boolean>(false);
+  const { submitStartupForm, submitted, loading, error } =
+    useSubmitStartupForm();
   const {
     register,
     handleSubmit,
@@ -21,9 +25,14 @@ export default function StartupFormContainer() {
   const openModal = useSelector(
     (store: RootState) => store.openModal.openModal
   );
-  const onSubmit = (data: Record<string, unknown>) => {
-    console.log("Form Data:", data);
-    setSubmitted(true);
+  const router = useRouter();
+  const onSubmit = async (data: yup.InferType<typeof formSchema>) => {
+    const result = await submitStartupForm(data);
+    if (result) {
+      setTimeout(() => {
+        router.push("/jobs");
+      }, 3000);
+    }
   };
   return (
     <div
@@ -56,7 +65,6 @@ export default function StartupFormContainer() {
               />
               <p className="text-red-500 text-sm">{errors.fullName?.message}</p>
             </div>
-
             {/* Email */}
             <div>
               <label className="block font-medium">Email</label>
@@ -68,7 +76,6 @@ export default function StartupFormContainer() {
               />
               <p className="text-red-500 text-sm">{errors.email?.message}</p>
             </div>
-
             {/* Phone */}
             <div>
               <label className="block font-medium">Phone</label>
@@ -79,7 +86,6 @@ export default function StartupFormContainer() {
               />
               <p className="text-red-500 text-sm">{errors.phone?.message}</p>
             </div>
-
             {/* Country */}
             <div>
               <label className="block font-medium">Country</label>
@@ -90,7 +96,6 @@ export default function StartupFormContainer() {
               />
               <p className="text-red-500 text-sm">{errors.country?.message}</p>
             </div>
-
             {/* About Your Startup */}
             <div>
               <label className="block font-medium">About Your Startup</label>
@@ -103,7 +108,6 @@ export default function StartupFormContainer() {
                 {errors.aboutYourStartup?.message}
               </p>
             </div>
-
             {/* Why You? */}
             <div>
               <label className="block font-medium">Why You?</label>
@@ -114,7 +118,6 @@ export default function StartupFormContainer() {
               ></textarea>
               <p className="text-red-500 text-sm">{errors.whyYou?.message}</p>
             </div>
-
             {/* Project Presentation (Optional) */}
             <div>
               <label className="block font-medium">
@@ -127,15 +130,14 @@ export default function StartupFormContainer() {
                 disabled={openModal}
               />
             </div>
-
-            {/* Submit Button */}
             <button
               type="submit"
               className="bg-blue-600 text-white px-4 py-2 rounded-md"
-              disabled={openModal}
+              disabled={openModal || loading} // Disable while loading
             >
-              Submit Information
+              {loading ? "Submitting..." : "Submit Information"}
             </button>
+            {error && <p className="text-red-500 text-sm">{error}</p>}{" "}
           </form>
         </div>
       )}
