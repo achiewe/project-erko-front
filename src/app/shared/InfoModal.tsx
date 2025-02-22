@@ -19,7 +19,6 @@ export default function InfoModal({ txt1, txt2 }: infoModalProps) {
       border-r-2 border-b-2 border-gray-800 m-auto absolute"
       style={{
         display: openModal ? "flex" : "none",
-        zIndex: openModal ? "1" : "0",
         boxShadow: openModal ? "1px 1px 3px rgba(0, 0, 0, 0.40)" : "none", // Applying the shadow conditionally
       }}
     >
