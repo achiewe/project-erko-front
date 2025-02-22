@@ -4,7 +4,7 @@ import React from "react";
 import aggementPng from "../../../../public/assets/aggement.png";
 import Link from "next/link";
 
-interface DocumentFoldersProps {
+interface AggementFilesProps {
   navigate: string;
   aggementName: string;
   textWidth?: string;
@@ -16,7 +16,7 @@ export default function AggementFiles({
   aggementName,
   textWidth,
   bottom,
-}: DocumentFoldersProps) {
+}: AggementFilesProps) {
   return (
     <Link
       href={navigate}
