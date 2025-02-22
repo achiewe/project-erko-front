@@ -11,8 +11,8 @@ border-r-2 border-b-2 border-gray-800 drop-shadow-[1px_1px_3px_rgba(0,0,0,0.40)]
       <AggementFiles
         navigate="/erko"
         aggementName="Core Principles [MVV]"
-        textWidth="150"
-        bottom="-38px"
+        textWidth="150px"
+        bottom="-39px"
       />
       <AggementFiles navigate="/erko" aggementName="Our Team" />
     </div>
