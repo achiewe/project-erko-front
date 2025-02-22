@@ -1,13 +1,14 @@
 "use client";
+import { useSubmitHelpForm } from "@/app/hooks/useSubmitHelpForm";
 import CreativityTxtDiv from "@/app/shared/CreativityTxtDiv";
 import { helpSchema } from "@/app/utils/HelpSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
-import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import React from "react";
 import { useForm } from "react-hook-form";
+import * as yup from "yup";
 
 export default function HelpContainer() {
-  const [submitted, setSubmitted] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -16,9 +17,16 @@ export default function HelpContainer() {
     resolver: yupResolver(helpSchema),
   });
 
-  const onSubmit = (data: object) => {
-    console.log(data);
-    setSubmitted(true);
+  const router = useRouter();
+  const { submitHelpForm, loading, error, submitted } = useSubmitHelpForm();
+
+  const onSubmit = async (data: yup.InferType<typeof helpSchema>) => {
+    const result = await submitHelpForm(data);
+    if (result) {
+      setTimeout(() => {
+        router.push("/erko");
+      }, 3000);
+    }
   };
 
   return (
@@ -36,25 +44,27 @@ export default function HelpContainer() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col w-full h-full px-4 gap-4"
           >
-            {/* Tell us about */}
+            {/* Tell us Help */}
             <div>
               <label className="block font-medium">
                 Tell us what you need help with!
               </label>
               <textarea
-                {...register("NeedHelp")}
+                {...register("tellUsHelp")}
                 className="w-full pl-2 border border-black outline-none h-20 rounded-md"
               ></textarea>
-              <p className="text-red-500 text-sm">{errors.NeedHelp?.message}</p>
+              <p className="text-red-500 text-sm">
+                {errors.tellUsHelp?.message}
+              </p>
             </div>
-            {/* Additional media (optional) */}
+            {/* Additional help media (optional) */}
             <div>
               <label className="block font-medium">
                 Additional Media (Optional)
               </label>
               <input
                 type="file"
-                {...register("AdditionalMedia")}
+                {...register("additionalHelpMedia")}
                 className="w-full"
               />
             </div>
@@ -62,9 +72,11 @@ export default function HelpContainer() {
             <button
               type="submit"
               className="w-full py-2 bg-blue-500 text-white rounded-md"
+              disabled={loading} // Disable button while loading
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
           </form>
         </div>
       )}

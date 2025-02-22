@@ -24,3 +24,8 @@ export interface StartupFormData{
   projectPresentation?: yup.Maybe<FileList | undefined>;
 }
 
+export interface HelpFormData{
+  tellUsHelp: string;
+  additionalHelpMedia?: yup.Maybe<FileList | undefined>;
+}
+
