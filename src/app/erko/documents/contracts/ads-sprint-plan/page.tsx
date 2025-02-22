@@ -1,5 +1,5 @@
 import Header from "@/app/components/Header/Header";
-import BackButton from "@/app/components/MemberCard/BackButton";
+import BackButton from "@/app/shared/BackButton";
 import React from "react";
 
 export default function page() {

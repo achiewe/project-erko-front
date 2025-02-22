@@ -1,5 +1,5 @@
 import Header from "@/app/components/Header/Header";
-import BackButton from "@/app/components/MemberCard/BackButton";
+import BackButton from "@/app/shared/BackButton";
 import MemberCard from "@/app/components/MemberCard/MemberCard";
 import LukaPxl from "../../../../../public/assets/luka pixel .png";
 import React from "react";

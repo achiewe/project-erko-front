@@ -1,6 +1,6 @@
 import React from "react";
 import RegionalMap from "./RegionalMap";
-import InfoModal from "./InfoModal";
+import InfoModal from "../../shared/InfoModal";
 
 export default function MainRegionalContainer() {
   return (
@@ -9,7 +9,10 @@ export default function MainRegionalContainer() {
   border-r-2 border-b-2 border-gray-800 drop-shadow-[1px_1px_3px_rgba(0,0,0,0.40)] relative"
     >
       <RegionalMap />
-      <InfoModal />
+      <InfoModal
+        txt1="ERKO supports international projects, adapting and restructuring our teams to ensure the success of each project. "
+        txt2="The red dots on the map represent international locations where our teams are currently operating remotely."
+      />
     </div>
   );
 }

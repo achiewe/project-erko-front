@@ -1,5 +1,5 @@
 import Header from "@/app/components/Header/Header";
-import BackButton from "@/app/components/MemberCard/BackButton";
+import BackButton from "@/app/shared/BackButton";
 import MusicContainer from "@/app/components/MusicContainer/MusicContainer";
 import React from "react";
 

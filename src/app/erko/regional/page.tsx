@@ -1,5 +1,5 @@
 import Header from "@/app/components/Header/Header";
-import BackButton from "@/app/components/MemberCard/BackButton";
+import BackButton from "@/app/shared/BackButton";
 import MainRegionalContainer from "@/app/components/RegionalProperties/MainRegionalContainer";
 import React from "react";
 
