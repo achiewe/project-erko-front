@@ -40,6 +40,7 @@ export default function Header() {
         <HeaderOptionBtn
           text="Help"
           onClick={() => {
+            dispatch(setIsDropDown(null));
             router.replace("/erko/help");
             router.refresh();
           }}
