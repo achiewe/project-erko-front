@@ -15,7 +15,7 @@ import creativePng from "../../../../public/assets/creative.png";
 export default function JobsMainContainer() {
   return (
     <div
-      className="flex mt-[1px] flex-row items-center sm:justify-center justify-start w-full h-full h-mn:gap-y-[0px] h-sm:gap-y-[10px] h-mm:pt-[0px] gap-y-[40px] flex-wrap gap-x-[50px] bg-[#FFFFF0] 
+      className="flex mt-[1px] flex-row items-center sm:justify-center justify-start w-full h-full h-mm:pt-[0px] gap-y-[40px] flex-wrap gap-x-[5px] bg-[#FFFFF0] 
 border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
     >
       <OptionCardErko
