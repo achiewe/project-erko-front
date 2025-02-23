@@ -9,7 +9,7 @@ const Wrapper = ({ children }: WrapperProps) => {
   return (
     <>
       {/* For Desktop (≥1024px) → Wrap content inside a flexbox */}
-      <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-full lg:h-screen lg:bg-[#008080]">
+      <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-full lg:h-screen lg:px-[50px] lg:py-[20px] lg:bg-[#008080]">
         {children}
       </div>
 

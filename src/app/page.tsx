@@ -15,8 +15,8 @@ export default function Home() {
   }, []);
   return (
     <Wrapper>
-      <main className="flex flex-col w-full h-screen bg-[#EEEEEE] overflow-hidden lg:h-full lg:max-w-[1024px] lg:max-h-[900px]">
-        <div className="flex px-[15px] py-[30px] w-full h-screen items-start overflow-hidden">
+      <main className="flex flex-col w-full h-screen bg-[#EEEEEE] overflow-hidden lg:h-full lg:max-w-[1600px] lg:max-h-[900px]">
+        <div className="flex px-[15px] py-[8px] w-full h-screen items-start overflow-hidden">
           <LoadingContainer />
         </div>
       </main>
