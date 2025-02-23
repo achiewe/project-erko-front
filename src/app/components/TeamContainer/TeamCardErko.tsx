@@ -25,7 +25,7 @@ export default function TeamCardErko({
           className="rounded-[66px] w-[132px] h-[132px]"
         />
       </div>
-      <h3 className="text-center text-[20px]">{title}</h3>
+      <h3 className="text-center text-[24px]">{title}</h3>
     </Link>
   );
 }
