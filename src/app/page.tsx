@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import LoadingContainer from "./components/Loading/LoadingContainer";
+import Wrapper from "./shared/Wrapper";
 
 export default function Home() {
   useEffect(() => {
@@ -13,10 +14,12 @@ export default function Home() {
     };
   }, []);
   return (
-    <main className="flex flex-col w-full h-screen bg-[#EEEEEE] overflow-hidden">
-      <div className="flex px-[15px] py-[30px] w-full h-screen items-start overflow-hidden">
-        <LoadingContainer />
-      </div>
-    </main>
+    <Wrapper>
+      <main className="flex flex-col w-full h-screen bg-[#EEEEEE] overflow-hidden lg:h-full lg:max-w-[1024px] lg:max-h-[900px]">
+        <div className="flex px-[15px] py-[30px] w-full h-screen items-start overflow-hidden">
+          <LoadingContainer />
+        </div>
+      </main>
+    </Wrapper>
   );
 }
