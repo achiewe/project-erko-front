@@ -40,7 +40,8 @@ export default function Header() {
         <HeaderOptionBtn
           text="Help"
           onClick={() => {
-            router.push("erko/help");
+            router.replace("/erko/help");
+            router.refresh();
           }}
         />
         <DropDownMenu />
