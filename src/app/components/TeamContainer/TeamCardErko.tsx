@@ -18,7 +18,7 @@ export default function TeamCardErko({
       href={link}
       className="flex flex-col justify-center items-center gap-[5px]"
     >
-      <div className="flex justify-start items-center w-[149px] flex-col h-[150px] border-[0.5px] bg-white border-black rounded-md">
+      <div className="flex justify-start items-center w-[149px] flex-col h-[150px] border-[2px] bg-white border-black rounded-md">
         <Image
           src={imageSrc}
           alt={title}

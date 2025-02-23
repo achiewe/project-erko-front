@@ -18,7 +18,7 @@ export default function JobsMainContainer() {
       className="flex mt-[1px] items-center justify-center w-full h-full h-mm:pt-[0px] bg-[#FFFFF0] 
 border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
     >
-      <div className="w-[363px] flex flex-row flex-wrap items-center justify-end md:w-full md:justify-center gap-y-[40px]">
+      <div className="w-[358px] flex flex-row flex-wrap items-center justify-end md:w-full md:justify-center gap-y-[40px]">
         <OptionCardErko
           title="Developer"
           imageSrc={developerPng}
