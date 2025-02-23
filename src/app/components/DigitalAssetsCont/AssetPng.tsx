@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import { useFreezeScroll } from "@/app/hooks/useFreezeScroll";
 
 interface ImageModalProps {
   src: StaticImageData;
@@ -11,10 +12,11 @@ interface ImageModalProps {
 export default function AssetPng({ src, alt, imgTitle }: ImageModalProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  useFreezeScroll(isOpen);
+
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <>
       <div
