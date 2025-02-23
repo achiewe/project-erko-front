@@ -10,6 +10,7 @@ import { RootState } from "@/app/redux/features/store";
 import { useSubmitStartupForm } from "@/app/hooks/useSubmitStartupForm";
 import { useRouter } from "next/navigation";
 import * as yup from "yup";
+import useOverflowControl from "@/app/hooks/useOverflowControl";
 
 export default function StartupFormContainer() {
   const { submitStartupForm, submitted, loading, error } =
@@ -25,6 +26,9 @@ export default function StartupFormContainer() {
   const openModal = useSelector(
     (store: RootState) => store.openModal.openModal
   );
+
+  useOverflowControl(openModal);
+
   const router = useRouter();
   const onSubmit = async (data: yup.InferType<typeof formSchema>) => {
     const result = await submitStartupForm(data);
