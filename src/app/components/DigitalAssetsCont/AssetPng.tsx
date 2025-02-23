@@ -22,7 +22,7 @@ export default function AssetPng({ src, alt, imgTitle }: ImageModalProps) {
         style={{ cursor: "pointer" }}
         className="flex flex-col gap-[15px] items-center justify-center"
       >
-        <Image src={src} alt={alt} width={96} height={96} />
+        <Image src={src} alt={alt} width={160} height={165} />
         <h3 className="text-[20px] w-[100px] text-center">{imgTitle}</h3>
       </div>
 
