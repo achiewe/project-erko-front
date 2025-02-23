@@ -18,19 +18,14 @@ export default function OptionCardErko({
   onClick,
 }: OptionCardProps) {
   return (
-    <div className="w-[150px]">
+    <div className="flex flex-col justify-center items-center w-[179px]">
       <Link
         href={link}
         className="flex justify-center items-center flex-col"
         onClick={onClick}
       >
-        <Image
-          src={imageSrc}
-          alt={title}
-          className="h-[150px] w-[170px] h-sm:h-[120px] h-sm:w-[140px] h-mm:h-[120px] h-mm:w-[140px] 
-          h-ml:h-[60px] h-ml:w-[80px]"
-        />
-        <h3 className="text-center text-[20px]">{title}</h3>
+        <Image src={imageSrc} alt={title} className="h-[150px]" />
+        <h3 className="text-center text-[25px]">{title}</h3>
       </Link>
     </div>
   );

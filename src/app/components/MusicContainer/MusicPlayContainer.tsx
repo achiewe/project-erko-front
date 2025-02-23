@@ -1,5 +1,5 @@
 import React from "react";
-import MusicPlayer from "../MusicPlayer/MusicPlayer";
+import MusicPlayer from "./MusicPlayer";
 
 export default function MusicPlayContainer() {
   return (

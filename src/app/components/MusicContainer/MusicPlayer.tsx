@@ -23,23 +23,7 @@ export default function MusicPlayer() {
   } = useMusicPlayer(songs);
 
   return (
-    <div className="p-4 bg-gray-800 text-white rounded-lg">
-      <h2 className="text-xl mb-4">Music Player</h2>
-
-      <div>
-        {songs.map((song, index) => (
-          <button
-            key={index}
-            onClick={() => playSong(index)}
-            className={`block w-full p-2 my-2 rounded ${
-              currentSongIndex === index ? "bg-blue-500" : "bg-gray-700"
-            }`}
-          >
-            {song.title}
-          </button>
-        ))}
-      </div>
-
+    <div className="p-4 text-white rounded-lg">
       <div className="mt-4">
         <button
           onClick={stopSong}
@@ -53,6 +37,19 @@ export default function MusicPlayer() {
         >
           {isPlaying ? "Pause" : "Play"}
         </button>
+      </div>
+      <div>
+        {songs.map((song, index) => (
+          <button
+            key={index}
+            onClick={() => playSong(index)}
+            className={`block w-full p-2 my-2 rounded ${
+              currentSongIndex === index ? "bg-blue-500" : "bg-gray-700"
+            }`}
+          >
+            {song.title}
+          </button>
+        ))}
       </div>
 
       <div className="mt-4">
