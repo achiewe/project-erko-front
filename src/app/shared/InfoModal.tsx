@@ -7,9 +7,10 @@ import { RootState } from "@/app/redux/features/store";
 interface infoModalProps {
   txt1: string;
   txt2: string;
+  top?: string;
 }
 
-export default function InfoModal({ txt1, txt2 }: infoModalProps) {
+export default function InfoModal({ txt1, txt2, top }: infoModalProps) {
   const openModal = useSelector(
     (store: RootState) => store.openModal.openModal
   );
@@ -20,6 +21,7 @@ export default function InfoModal({ txt1, txt2 }: infoModalProps) {
       style={{
         display: openModal ? "flex" : "none",
         boxShadow: openModal ? "1px 1px 3px rgba(0, 0, 0, 0.40)" : "none", // Applying the shadow conditionally
+        top: top,
       }}
     >
       <p className="text-center text-[24px]">{txt1}</p>

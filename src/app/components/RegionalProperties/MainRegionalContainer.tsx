@@ -22,6 +22,7 @@ export default function MainRegionalContainer() {
       <InfoModal
         txt1="ERKO supports international projects, adapting and restructuring our teams to ensure the success of each project."
         txt2="The red dots on the map represent international locations where our teams are currently operating remotely."
+        top="-220px"
       />
     </div>
   );
