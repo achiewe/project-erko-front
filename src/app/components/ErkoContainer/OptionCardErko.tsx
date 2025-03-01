@@ -18,7 +18,7 @@ export default function OptionCardErko({
   onClick,
 }: OptionCardProps) {
   return (
-    <div className="flex flex-col justify-center items-center w-[179px] lg:w-[280px] lg:h-[240px] 2xl:w-[300px] 2xl:h-[220px] lg:relative">
+    <div className="flex flex-col justify-center items-center w-[179px] lg:w-[280px] lg:h-[240px] 2xl:w-[300px] 2xl:h-[220px]">
       <Link
         href={link}
         className="flex justify-center items-center flex-col"

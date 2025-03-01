@@ -18,7 +18,7 @@ export default function MainErkoContainer() {
       className="flex mt-[1px] items-center justify-center w-full h-full bg-[#FFFFF0] border-r-2 border-b-2 border-gray-800 
       drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)] h-mm:pt-[0px] py-[20px] relative lg:items-start"
     >
-      <div className="w-[358px] flex flex-row flex-wrap items-center justify-end md:w-full md:justify-center gap-y-[40px] lg:justify-start lg:gap-y-[10px]">
+      <div className="w-[358px] flex flex-row flex-wrap items-center justify-end md:w-full md:justify-center gap-y-[40px] lg:justify-start 2xl:gap-y-[200px]">
         <OptionCardErko title="Team" imageSrc={teamPng} link="/erko/team" />
         <OptionCardErko
           title="Socials"
