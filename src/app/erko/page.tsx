@@ -7,9 +7,9 @@ import Wrapper from "../shared/Wrapper";
 export default function page() {
   return (
     <Wrapper>
-      <main className="flex flex-col w-full h-full bg-[#EEEEEE] lg:max-w-[1600px]">
+      <main className="flex flex-col w-full h-full bg-[#EEEEEE] lg:max-w-[960px] lg:max-h-[700px]">
         <Header />
-        <div className="flex px-[5px] w-full h-full items-start flex-col pb-[10px] lg:px-[20px] lg:h-screen">
+        <div className="flex px-[5px] w-full h-full items-start flex-col pb-[10px] lg:px-[20px]">
           <NavigationPages />
           <MainErkoContainer />
         </div>

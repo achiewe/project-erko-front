@@ -14,9 +14,9 @@ export default function CreativityTxtDiv({ text }: CreativityTxtProps) {
         alt="light png"
         width={53}
         height={49}
-        className="lg:w-[105px]"
+        className="lg:w-[80px]"
       />
-      <p className="text-[20px] text-center w-full font-medium px-[10px] lg:w-[600px] lg:px-0 lg:text-[25px]">
+      <p className="text-[20px] text-center w-full font-medium px-[10px] lg:w-[600px] lg:px-0 lg:text-[22px]">
         {text}
       </p>
     </div>
