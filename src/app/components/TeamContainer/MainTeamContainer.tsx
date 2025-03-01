@@ -17,7 +17,12 @@ export default function MainTeamContainer() {
         <TeamCardErko title="Luka" imageSrc={VaxanaPxl} link="/erko/team/4" />
         <TeamCardErko title="Dachi" imageSrc={DachiPxl} link="/erko/team/5" />
         <TeamCardErko title="Sandro" imageSrc={SandroPxl} link="/erko/team/6" />
-        <TeamCardErko title="Nika" imageSrc={NikaPxl} link="/erko/team/7" />
+        <TeamCardErko
+          title="Nika"
+          imageSrc={NikaPxl}
+          link="/erko/team/7"
+          position="absolute"
+        />
       </div>
     </div>
   );
