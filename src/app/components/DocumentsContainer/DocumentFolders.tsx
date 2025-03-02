@@ -17,8 +17,14 @@ export default function DocumentFolders({
       href={navigate}
       className="flex flex-col items-center justify-center relative"
     >
-      <Image src={folderPng} alt="folder png" className="w-[179px] h-[165px]" />
-      <h3 className="text-[25px] absolute bottom-0">{folderName}</h3>
+      <Image
+        src={folderPng}
+        alt="folder png"
+        className="w-[179px] h-[165px] lg:w-[200px] lg:h-[200px]"
+      />
+      <h3 className="text-[25px] absolute bottom-0 lg:text-[28px]">
+        {folderName}
+      </h3>
     </Link>
   );
 }

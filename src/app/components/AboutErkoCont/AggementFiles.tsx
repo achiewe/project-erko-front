@@ -25,10 +25,10 @@ export default function AggementFiles({
       <Image
         src={aggementPng}
         alt="aggement png"
-        className="w-[179px] h-[165px]"
+        className="w-[179px] h-[165px] lg:w-[200px] lg:h-[200px]"
       />
       <h3
-        className={`text-[25px] absolute bottom-0 text-center`}
+        className={`text-[25px] absolute bottom-0 text-center lg:text-[28px]`}
         style={{ width: `${textWidth}`, bottom: `${bottom}` }}
       >
         {aggementName}
