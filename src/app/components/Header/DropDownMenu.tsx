@@ -24,7 +24,7 @@ export default function DropDownMenu() {
       className={`${
         isDropDown ? "absolute" : "hidden"
       } pl-[7px] top-[38px] z-10 bg-white w-[160px] border-b-2 border-r-2 border-l-2 border-t-2 
-      border-b-gray-800 border-r-gray-800 border-l-gray-200 border-t-gray-200 
+      border-b-gray-800 border-r-gray-800 border-l-gray-200 border-t-gray-200 lg:top-8
       ${leftPositions[activeMenu || "File"]}`}
     >
       <MenuItem text="New File" />

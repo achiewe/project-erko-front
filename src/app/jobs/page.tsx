@@ -7,7 +7,7 @@ import Wrapper from "../shared/Wrapper";
 export default function page() {
   return (
     <Wrapper>
-      <div className="bg-[#EEEEEE] lg:max-w-[960px] lg:max-h-[700px]">
+      <div className="bg-[#EEEEEE] lg:max-w-[960px] lg:max-h-[700px] lg:shadow-lg lg:shadow-gray-800">
         <Header />
         <div className="flex px-[5px] w-full h-full items-start pb-[10px] flex-col lg:px-[20px]">
           <NavigationPages />
