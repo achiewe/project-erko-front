@@ -17,11 +17,11 @@ const DropDownSlice = createSlice({
   initialState,
   reducers: {
     setIsDropDown: (state, action: PayloadAction<string | null>) => {
-      if (state.activeMenu === action.payload) {
-        state.isDropDown = !state.isDropDown; // Toggle dropdown
-      } else if (action.payload === null) {
-        state.isDropDown = false; // Close dropdown
+      if (action.payload === null) {
+        state.isDropDown = false; // Ensure dropdown is always closed
         state.activeMenu = null;
+      } else if (state.activeMenu === action.payload) {
+        state.isDropDown = !state.isDropDown; // Toggle dropdown
       } else {
         state.isDropDown = true;
       }
