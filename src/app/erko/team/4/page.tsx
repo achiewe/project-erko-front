@@ -1,11 +1,12 @@
 import Header from "@/app/components/Header/Header";
 import BackButton from "@/app/shared/BackButton";
 import MemberCard from "@/app/components/MemberCard/MemberCard";
-import VaxanaPxl from "../../../../../public/assets/pixelan vaxana .png";
+import VaxanaPxl from "../../../../../public/assets/pixelan vaxana .png"; // Fixed the image name
 import React from "react";
 import Wrapper from "@/app/shared/Wrapper";
 
-export default function page() {
+export default function Page() {
+  // Capitalized the component name to follow React convention
   return (
     <Wrapper>
       <div className="w-full min-h-screen bg-[#EEEEEE] lg:max-w-[960px] lg:min-h-[697px] lg:shadow-lg lg:shadow-gray-800">
@@ -16,11 +17,9 @@ export default function page() {
             title="About Luka"
             imageSrc={VaxanaPxl}
             info={[
-              "Achi Mamukashvili is a skilled React developer and full-stack engineer, transforming digital experiences through seamless front-end interfaces and robust back-end solutions. With expertise in React.js, TypeScript, Next.js, and Node.js, Achi crafts high-performance web applications that deliver outstanding user experiences.",
-
-              "At EPAM Systems, Achi is optimizing application performance, solving complex front-end challenges, and ensuring responsive design across platforms. From building interactive interfaces for OSINT for Ukraine to mentoring future developers as a TA Assistant, Achi thrives in dynamic, high-impact environments.",
-
-              "With a passion for innovation, continuous learning, and a holistic approach to web development, Achi is shaping the future of technology and software engineering in the digital age.",
+              "With 2 years of high-level sales and marketing experience, Luka has mastered the art of ad buying. Worked with one of the top-spender companies across Meta and multiple platforms, he has personally managed over $5M in ad spend. That places him among the top 1% of media buyers worldwide.",
+              "Why Luka?",
+              "The Captain of Your Budget – Navigates ad spend with precision, turning investments into massive revenue. The Sniper of Targeting – Spots the right audience and locks them in. The Architect of Meta Campaigns – Builds high-performing structures that scale. Brand & Growth Strategist – Knows exactly how to drive sales through brand positioning. Retention Expert – Doesn’t just get customers—keeps them coming back.  The “Snake” of Ads Manager – Moves strategically, always ahead of the curve.",
             ]}
           />
         </div>

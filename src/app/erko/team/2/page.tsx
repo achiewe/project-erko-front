@@ -17,8 +17,8 @@ export default function page() {
             imageSrc={TemikoPxl}
             info={[
               "Temur Khazaradze is a strategic marketer and brand architect, known for building and scaling ventures across multiple industries. As the founder of ERKO, he blends bold branding, consumer psychology, and high-impact marketing to drive success.",
-              " Why Temur? Brand Builder – Creates cult-like followings around businesses Growth Hacker – Drives massive engagement & conversions Trend Forecaster – Spots opportunities before they go mainstream High-ROI Strategist – Delivers marketing that sells & scales ",
-              "From streetwear to digital influence, Temur dominates the marketing game, helping brands own their space and turn vision into revenue.",
+              " Why Temur?",
+              "Brand Builder – Creates cult-like followings around businesses Growth Hacker – Drives massive engagement & conversions Trend Forecaster – Spots opportunities before they go mainstream High-ROI Strategist – Delivers marketing that sells & scales, From streetwear to digital influence, Temur dominates the marketing game, helping brands own their space and turn vision into revenue.",
             ]}
           />
         </div>
