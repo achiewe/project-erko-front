@@ -42,7 +42,7 @@ export default function StartupFormContainer() {
     <div
       className="flex flex-row items-start sm:justify-center justify-start w-full 
   h-full h-mn:gap-y-[0px] h-sm:gap-y-[10px] h-mm:pt-[0px] gap-y-[40px] flex-wrap gap-x-[50px] bg-[#FFFFF0] 
-  border-r-2 border-b-2 border-gray-800 drop-shadow-[0px_0px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
+  border-r-2 border-b-2 border-gray-800 drop-shadow-[0px_0px_3px_rgba(0,0,0,0.40)] py-[20px] relative lg:overflow-y-auto lg:h-[605px]"
     >
       <InfoModal
         txt1="ERKO supports bold, creative minds and life-changing startups striving to make the world a better place."
@@ -61,87 +61,107 @@ export default function StartupFormContainer() {
           >
             {/* Full Name */}
             <div>
-              <label className="block font-medium">Full Name</label>
+              <label className="block font-medium lg:text-[20px]">
+                Full Name
+              </label>
               <input
                 {...register("fullName")}
-                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md lg:text-[20px]"
                 disabled={openModal}
               />
-              <p className="text-red-500 text-sm">{errors.fullName?.message}</p>
+              <p className="text-red-500 text-sm lg:text-[20px]">
+                {errors.fullName?.message}
+              </p>
             </div>
             {/* Email */}
             <div>
-              <label className="block font-medium">Email</label>
+              <label className="block font-medium lg:text-[20px]">Email</label>
               <input
                 type="email"
                 {...register("email")}
-                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md lg:text-[20px]"
                 disabled={openModal}
               />
-              <p className="text-red-500 text-sm">{errors.email?.message}</p>
+              <p className="text-red-500 text-sm lg:text-[20px]">
+                {errors.email?.message}
+              </p>
             </div>
             {/* Phone */}
             <div>
-              <label className="block font-medium">Phone</label>
+              <label className="block font-medium lg:text-[20px]">Phone</label>
               <input
                 {...register("phone")}
-                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md lg:text-[20px]"
                 disabled={openModal}
               />
-              <p className="text-red-500 text-sm">{errors.phone?.message}</p>
+              <p className="text-red-500 text-sm lg:text-[20px]">
+                {errors.phone?.message}
+              </p>
             </div>
             {/* Country */}
             <div>
-              <label className="block font-medium">Country</label>
+              <label className="block font-medium lg:text-[20px]">
+                Country
+              </label>
               <input
                 {...register("country")}
-                className="w-full pl-2 border border-black outline-none h-10 rounded-md"
+                className="w-full pl-2 border border-black outline-none h-10 rounded-md lg:text-[20px]"
                 disabled={openModal}
               />
-              <p className="text-red-500 text-sm">{errors.country?.message}</p>
+              <p className="text-red-500 text-sm lg:text-[20px]">
+                {errors.country?.message}
+              </p>
             </div>
             {/* About Your Startup */}
             <div>
-              <label className="block font-medium">About Your Startup</label>
+              <label className="block font-medium lg:text-[20px]">
+                About Your Startup
+              </label>
               <textarea
                 {...register("aboutYourStartup")}
-                className="w-full pl-2 border border-black outline-none h-20 rounded-md"
+                className="w-full pl-2 border border-black outline-none h-20 rounded-md lg:text-[20px]"
                 disabled={openModal}
               ></textarea>
-              <p className="text-red-500 text-sm">
+              <p className="text-red-500 text-sm lg:text-[20px]">
                 {errors.aboutYourStartup?.message}
               </p>
             </div>
             {/* Why You? */}
             <div>
-              <label className="block font-medium">Why You?</label>
+              <label className="block font-medium lg:text-[20px]">
+                Why You?
+              </label>
               <textarea
                 {...register("whyYou")}
-                className="w-full pl-2 border border-black outline-none h-20 rounded-md"
+                className="w-full pl-2 border border-black outline-none h-20 rounded-md lg:text-[20px]"
                 disabled={openModal}
               ></textarea>
-              <p className="text-red-500 text-sm">{errors.whyYou?.message}</p>
+              <p className="text-red-500 text-sm lg:text-[20px]">
+                {errors.whyYou?.message}
+              </p>
             </div>
             {/* Project Presentation (Optional) */}
             <div>
-              <label className="block font-medium">
+              <label className="block font-medium lg:text-[20px]">
                 Project Presentation (Optional)
               </label>
               <input
                 type="file"
                 {...register("projectPresentation")}
-                className="w-full"
+                className="w-full lg:text-[20px]"
                 disabled={openModal}
               />
             </div>
             <button
               type="submit"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md lg:text-[20px]"
               disabled={openModal || loading} // Disable while loading
             >
               {loading ? "Submitting..." : "Submit Information"}
             </button>
-            {error && <p className="text-red-500 text-sm">{error}</p>}{" "}
+            {error && (
+              <p className="text-red-500 text-sm lg:text-[20px]">{error}</p>
+            )}{" "}
           </form>
         </div>
       )}
