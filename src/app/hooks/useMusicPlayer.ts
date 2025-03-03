@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Howl } from "howler";
 
 interface Song {
@@ -11,6 +11,15 @@ export const useMusicPlayer = (songs: Song[]) => {
   const [player, setPlayer] = useState<Howl | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [volume, setVolume] = useState<number>(1);
+
+  // Cleanup the Howl instance when the component unmounts
+  useEffect(() => {
+    return () => {
+      if (player) {
+        player.stop(); // Stop the player when the component unmounts
+      }
+    };
+  }, [player]);
 
   const playSong = (index: number) => {
     if (player) {
