@@ -7,6 +7,7 @@ import NowPlaying from "./NowPlaying";
 import Controls from "./Controls";
 import MusicThumbImg from "./MusicThumbImg";
 import songs from "@/app/data/data.json"; // Import the JSON file
+import SimpleVolumeTest from "./simpleVolumeTest";
 
 export default function MusicPlayer() {
   const {
@@ -33,6 +34,7 @@ export default function MusicPlayer() {
         />
       </div>
       <NowPlaying currentSongIndex={currentSongIndex} songs={songs} />
+      <SimpleVolumeTest />
 
       <VolumeControl volume={volume} changeVolume={changeVolume} />
     </div>
