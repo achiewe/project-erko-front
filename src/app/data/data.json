@@ -1,0 +1,14 @@
+[
+    {
+      "title": "Song One",
+      "artist": "Jelly Crystal",
+      "src": "/music/muzika.mp3",
+      "thumbnail": "/assets/3DArtist.png"
+    },
+    {
+      "title": "Song Two",
+      "artist": "george moses",
+      "src": "/music/song2.mp3",
+      "thumbnail": "/assets/3DArtist.png"
+    }
+  ]

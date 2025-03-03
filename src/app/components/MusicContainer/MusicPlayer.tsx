@@ -5,11 +5,10 @@ import { useMusicPlayer } from "@/app/hooks/useMusicPlayer";
 import VolumeControl from "./VolumeControl";
 import NowPlaying from "./NowPlaying";
 import Controls from "./Controls";
-import { Song } from "../../../../type/type";
 import MusicThumbImg from "./MusicThumbImg";
+import songs from "@/app/data/data.json"; // Import the JSON file
 
 export default function MusicPlayer() {
-  const songs: Song[] = JSON.parse(process.env.NEXT_PUBLIC_SONGS || "[]");
   const {
     currentSongIndex,
     isPlaying,
