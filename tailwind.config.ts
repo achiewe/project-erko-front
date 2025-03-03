@@ -24,6 +24,16 @@ export default {
         'h-mw': { 'raw': '(max-height: 600px)' },
         'h-ml': { 'raw': '(max-height: 560px)' },
       },
+      keyframes: {
+        scrollText: {
+          "0%": { transform: "translateX(-100%)" }, 
+          "100%": { transform: "translateX(100%)" }, 
+        },
+      },
+      // Add the animation utility
+      animation: {
+        scrollText: "scrollText 10s linear infinite",
+      },
     },
   },
   plugins: [],

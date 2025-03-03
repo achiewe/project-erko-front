@@ -29,3 +29,29 @@ export interface HelpFormData{
   additionalHelpMedia?: yup.Maybe<FileList | undefined>;
 }
 
+
+export interface Song {
+  title: string;
+  artist:string;
+  src: string;
+  thumbnail?:string;
+}
+
+export interface ControlsProps {
+  isPlaying: boolean;
+  stopSong: () => void;
+  togglePlayPause: () => void;
+  nextSong: () => void;
+  previousSong: () => void;
+}
+
+export interface VolumeControlProps {
+  volume: number;
+  changeVolume: (volume: number) => void;
+}
+
+export interface NowPlayingProps {
+  currentSongIndex: number;
+  songs: Song[];
+}
+

@@ -35,6 +35,37 @@ body {
     background-color: rgb(150, 150, 150); 
   }
   
+  /* VolumeControl.css */
+.volume-slider {
+  width: 100%;
+  height: 27px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #858585 var(--volume-percent), #DBDBDB var(--volume-percent));
+  cursor: pointer;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 27px;
+  background: #cecece;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 10px;
+  height: 27px;
+  background: #cecece;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
   
   
 

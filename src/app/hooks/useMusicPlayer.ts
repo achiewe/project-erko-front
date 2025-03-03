@@ -7,18 +7,21 @@ interface Song {
 }
 
 export const useMusicPlayer = (songs: Song[]) => {
-  const [currentSongIndex, setCurrentSongIndex] = useState<number>(0);
+  const [currentSongIndex, setCurrentSongIndex] = useState<number>(-1); // Initialize to -1 (no song selected)
   const [player, setPlayer] = useState<Howl | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [volume, setVolume] = useState<number>(1);
 
   const playSong = (index: number) => {
-    if (player) player.stop(); // Stop previous song
+    if (player) {
+      player.stop(); // Stop the current song if it exists
+    }
 
     const newPlayer = new Howl({
       src: [songs[index].src],
       html5: true,
       volume: volume,
+      onend: () => nextSong(), // Automatically play the next song when the current one ends
     });
 
     newPlayer.play();
@@ -31,6 +34,7 @@ export const useMusicPlayer = (songs: Song[]) => {
     if (player) {
       player.stop();
       setIsPlaying(false);
+      setCurrentSongIndex(-1); // Reset to no song selected
     }
   };
 
@@ -42,6 +46,9 @@ export const useMusicPlayer = (songs: Song[]) => {
         player.play();
       }
       setIsPlaying(!isPlaying);
+    } else if (currentSongIndex === -1) {
+      // If no song is selected, start playing the first song
+      playSong(0);
     }
   };
 
@@ -66,7 +73,6 @@ export const useMusicPlayer = (songs: Song[]) => {
     currentSongIndex,
     isPlaying,
     volume,
-    playSong,
     stopSong,
     togglePlayPause,
     changeVolume,
