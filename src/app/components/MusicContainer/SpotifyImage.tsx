@@ -21,6 +21,7 @@ export default function SpotifyImage({
       alt="spotify png"
       width={25}
       height={25}
+      className="lg:w-[40px]"
       style={{
         position: "absolute",
         top: top ? `${top}rem` : "auto",

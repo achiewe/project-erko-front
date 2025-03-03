@@ -7,7 +7,6 @@ import NowPlaying from "./NowPlaying";
 import Controls from "./Controls";
 import MusicThumbImg from "./MusicThumbImg";
 import songs from "@/app/data/data.json"; // Import the JSON file
-import SimpleVolumeTest from "./simpleVolumeTest";
 
 export default function MusicPlayer() {
   const {
@@ -22,8 +21,8 @@ export default function MusicPlayer() {
   } = useMusicPlayer(songs);
 
   return (
-    <div className="p-4 text-white rounded-lg flex flex-col justify-center items-center gap-5">
-      <div className="w-full flex flex-row items-center justify-center gap-5">
+    <div className="p-4 text-white rounded-lg flex flex-col justify-center items-center gap-5 lg:gap-8">
+      <div className="w-full flex flex-row items-center justify-center gap-5 lg:gap-12">
         <MusicThumbImg currentSongIndex={currentSongIndex} songs={songs} />
         <Controls
           isPlaying={isPlaying}
@@ -34,8 +33,6 @@ export default function MusicPlayer() {
         />
       </div>
       <NowPlaying currentSongIndex={currentSongIndex} songs={songs} />
-      <SimpleVolumeTest />
-
       <VolumeControl volume={volume} changeVolume={changeVolume} />
     </div>
   );
