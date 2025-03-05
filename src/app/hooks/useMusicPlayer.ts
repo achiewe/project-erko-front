@@ -29,6 +29,7 @@ export const useMusicPlayer = (songs: Song[]) => {
     const newPlayer = new Howl({
       src: [songs[index].src],
       html5: false,
+      format: ['mp3'],
       volume: volume,
       onend: () => nextSong(), // Automatically play the next song when the current one ends
     });
