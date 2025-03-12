@@ -22,9 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Ahrefs Analytics Script */}
-        <script 
-          src="https://analytics.ahrefs.com/analytics.js" 
-          data-key="ess48jURvfdupzB/Rcrn4g" 
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="ess48jURvfdupzB/Rcrn4g"
           async
         ></script>
       </head>
