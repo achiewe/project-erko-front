@@ -20,6 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Ahrefs Analytics Script */}
+        <script 
+          src="https://analytics.ahrefs.com/analytics.js" 
+          data-key="ess48jURvfdupzB/Rcrn4g" 
+          async
+        ></script>
+      </head>
       <body className={myfont.className}>
         <ReduxProvider>{children}</ReduxProvider>
       </body>
