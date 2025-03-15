@@ -5,6 +5,7 @@ import MainErkoContainer from "../components/ErkoContainer/MainErkoContainer";
 import Wrapper from "../shared/Wrapper";
 
 export default function page() {
+  // comment
   return (
     <Wrapper>
       <main className="bg-[#EEEEEE] lg:max-w-[960px] lg:min-h-[697px] lg:shadow-lg lg:shadow-gray-800">
