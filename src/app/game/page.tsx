@@ -1,7 +1,6 @@
 import React from "react";
 import GameBoard from "../components/tictactoe/GameBoard";
 import Wrapper from "../shared/Wrapper";
-import Header from "../components/Header/Header";
 
 export default function page() {
   return (
