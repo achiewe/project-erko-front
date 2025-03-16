@@ -25,7 +25,7 @@ export function useSubmitHelpForm() {
             }
           }
       
-          const response = await fetch(`https://project-erko-back-production.up.railway.app/help`, {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/help`, {
             method: "POST",
             body: data,
           });
