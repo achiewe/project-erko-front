@@ -29,7 +29,7 @@ export function useSubmitForm() {
         }
       });
   
-      const response = await fetch("http://localhost:4000/post", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post`, {
         method: "POST",
         body: data,
       });

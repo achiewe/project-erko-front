@@ -34,7 +34,7 @@ export function useSubmitStartupForm() {
         }
       });
 
-      const response = await fetch("http://localhost:4000/startup", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/startup`, {
         method: "POST",
         body: data,
       });
