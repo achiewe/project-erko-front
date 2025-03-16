@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import OptionCardErko from "../ErkoContainer/OptionCardErko";
 import developerPng from "../../../../public/assets/developer.png";
@@ -11,8 +12,11 @@ import salesPng from "../../../../public/assets/sales.png";
 import DArtistPng from "../../../../public/assets/3DArtist.png";
 import strategistPng from "../../../../public/assets/strategist.png";
 import creativePng from "../../../../public/assets/creative.png";
+import { useDispatch } from "react-redux";
+import { setIsDropDown } from "@/app/redux/features/DropDownSlice";
 
 export default function JobsMainContainer() {
+  const dispatch = useDispatch();
   return (
     <div
       className="flex mt-[1px] items-center justify-center w-full h-full h-mm:pt-[0px] bg-[#FFFFF0] 
@@ -26,56 +30,67 @@ border-r-2 border-b-2 border-gray-800 drop-shadow-[4px_3px_3px_rgba(0,0,0,0.40)]
           title="Developer"
           imageSrc={developerPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Assistant"
           imageSrc={assistantPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Advertiser"
           imageSrc={advertiserPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Meme Maker"
           imageSrc={memeMakerPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Graphic Designer"
           imageSrc={designerPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Video Editor"
           imageSrc={editorPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Student Internship"
           imageSrc={intershipPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Sales God"
           imageSrc={salesPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="3D Artist"
           imageSrc={DArtistPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Content Strategist"
           imageSrc={strategistPng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Creative Mind"
           imageSrc={creativePng}
           link="/jobs/form"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
       </div>
     </div>

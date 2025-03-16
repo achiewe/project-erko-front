@@ -3,8 +3,6 @@
 import React from "react";
 import GifButtonDiv from "./GifButtonDiv";
 import CreativityTxtDiv from "../../shared/CreativityTxtDiv";
-import anyDeskPng from "../../../../public/assets/anyDesk.png";
-import Image from "next/image";
 
 export default function LoadingContainer() {
   return (
@@ -18,13 +16,6 @@ export default function LoadingContainer() {
       </h1>
       <GifButtonDiv />
       <CreativityTxtDiv text="Creativity isn’t thinking outside the box; it’s realising the box was never there to begin with." />
-      <Image
-        src={anyDeskPng}
-        alt="any desk png"
-        className="absolute bottom-10 h-sm:bottom-5 lg:w-[180px] lg:bottom-4"
-        width={131}
-        height={24}
-      />
     </div>
   );
 }

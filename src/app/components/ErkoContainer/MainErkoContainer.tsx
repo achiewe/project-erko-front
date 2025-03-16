@@ -10,6 +10,7 @@ import documentsPng from "../../../../public/assets/documents.png";
 import archivePng from "../../../../public/assets/archive.png";
 import { useDispatch } from "react-redux";
 import { setOpenModal } from "@/app/redux/features/ModalOpenSlice";
+import { setIsDropDown } from "@/app/redux/features/DropDownSlice";
 
 export default function MainErkoContainer() {
   const dispatch = useDispatch();
@@ -22,11 +23,12 @@ export default function MainErkoContainer() {
         className="w-[358px] flex flex-row flex-wrap items-center justify-end md:w-full md:justify-center gap-y-[40px] lg:justify-start 
       lg:gap-y-[80px] lg:gap-x-[20px]"
       >
-        <OptionCardErko title="Team" imageSrc={teamPng} link="/erko/team" />
+        <OptionCardErko title="Team" imageSrc={teamPng} link="/erko/team" onClick={() => {dispatch(setIsDropDown(null))}} />
         <OptionCardErko
           title="Socials"
           imageSrc={socialsPng}
           link="/erko/socials"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Startup Consulting"
@@ -34,12 +36,14 @@ export default function MainErkoContainer() {
           link="/erko/consulting"
           onClick={() => {
             dispatch(setOpenModal(true));
+            dispatch(setIsDropDown(null));
           }}
         />
         <OptionCardErko
           title="Free Music"
           imageSrc={freeMusicPng}
           link="/erko/music"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Regional Properties"
@@ -47,17 +51,20 @@ export default function MainErkoContainer() {
           link="/erko/regional"
           onClick={() => {
             dispatch(setOpenModal(true));
+            dispatch(setIsDropDown(null));
           }}
         />
         <OptionCardErko
           title="Documents"
           imageSrc={documentsPng}
           link="/erko/documents"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
         <OptionCardErko
           title="Archive"
           imageSrc={archivePng}
           link="/erko/archive"
+          onClick={() => {dispatch(setIsDropDown(null))}}
         />
       </div>
     </main>

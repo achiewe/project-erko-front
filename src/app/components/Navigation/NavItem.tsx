@@ -1,19 +1,23 @@
 "use client";
+import { setIsDropDown } from "@/app/redux/features/DropDownSlice";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { JSX } from "react";
+import { useDispatch } from "react-redux";
 
 interface NavItemProps {
   href: string;
   label: string;
 }
 
-export function NavItem({ href, label }: NavItemProps): JSX.Element {
+export function NavItem({ href, label}: NavItemProps): JSX.Element {
   const pathname = usePathname();
+  const dispatch = useDispatch();
   const isActive = pathname === href;
 
   return (
     <li
+      onClick={() => {dispatch(setIsDropDown(null))}}
       className={`w-[69px] h-[30px] flex justify-center items-center 
         ${
           isActive

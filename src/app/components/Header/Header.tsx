@@ -16,8 +16,9 @@ export default function Header() {
         <Image
           src={erkoLogo}
           alt="erko logo"
+          className="cursor-pointer"
           onClick={() => {
-            location.reload();
+            router.push("/erko");
           }}
         />
         <HeaderOptionBtn
