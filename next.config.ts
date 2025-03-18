@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/consultation", // Old URL
+        destination: "/erko/consulting", // New URL
+        permanent: true, // 301 Redirect (SEO-friendly)
+      },
+    ];
+  },
 };
 
 export default nextConfig;
