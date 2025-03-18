@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.erko.ge
+
+# Sitemaps
+Sitemap: https://www.erko.ge/sitemap.xml
