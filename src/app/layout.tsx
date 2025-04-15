@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReduxProvider } from "./redux/provider";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className={myfont.className}>
         <ReduxProvider>{children}</ReduxProvider>
+        <Analytics />
       </body>
     </html>
   );
