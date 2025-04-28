@@ -63,7 +63,8 @@ export default function MainErkoContainer() {
         <OptionCardErko
           title="Archive"
           imageSrc={archivePng}
-          link="/erko/archive"
+          link="https://www.google.com/"
+          target="_blank"
           onClick={() => {dispatch(setIsDropDown(null))}}
         />
       </div>
