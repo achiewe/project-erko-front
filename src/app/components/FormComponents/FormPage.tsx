@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userSchema } from "@/app/utils/validationSchema";
 import { useSubmitForm } from "@/app/hooks/useSubmitForm";
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import * as yup from "yup";
 
 export default function FormPage() {
