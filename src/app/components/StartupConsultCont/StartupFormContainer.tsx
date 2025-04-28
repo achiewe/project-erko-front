@@ -158,6 +158,9 @@ export default function StartupFormContainer() {
                 className="w-full lg:text-[20px]"
                 disabled={openModal || loading} // Disable during loading
               />
+              <p className="text-red-500 text-sm lg:text-[20px]">
+                {errors.projectPresentation?.message}
+              </p>
             </div>
             <button
               type="submit"

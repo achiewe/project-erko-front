@@ -61,7 +61,7 @@ return (
                 className="w-full pl-2 border border-black outline-none h-20 rounded-md lg:text-[20px]"
                 disabled={loading} // Disable during loading
               ></textarea>
-              <p className="text-red-500 text-sm">
+              <p className="text-red-500 text-sm lg:text-[20px]">
                 {errors.tellUsHelp?.message}
               </p>
             </div>
@@ -73,9 +73,12 @@ return (
               <input
                 type="file"
                 {...register("additionalHelpMedia")}
-                className="w-full lg:text-[20px]"
+                className="w-full lg:text-[20px] lg:mb-3"
                 disabled={loading} // Disable during loading
               />
+              <p className="text-red-500 text-sm lg:text-[20px]">
+              {errors.additionalHelpMedia?.message} 
+            </p>
             </div>
             {/* Submit Button */}
             <button

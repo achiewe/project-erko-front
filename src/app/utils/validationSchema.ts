@@ -11,7 +11,17 @@ export const userSchema = yup.object({
   ).notRequired().nullable(),
   about: yup.string().required("Tell us about yourself is required"),
   resonate: yup.string().oneOf(["yes", "no"], "You must select an option").required(),
-  resume: yup.mixed<FileList>().required("Resume is required"),
-  additionalMedia: yup.mixed<FileList>().notRequired(),
+  resume: yup.mixed<FileList>()
+    .required("Resume is required")
+    .test("fileSize", "Resume file is too large. Maximum size is 10MB.", (value) => {
+      if (!value || value.length === 0) return false; // Fail if no file (required handles this)
+      return value[0].size <= 10 * 1024 * 1024; // 10MB limit
+    }),
+    additionalMedia: yup.mixed<FileList>()
+    .notRequired()
+    .test("fileSize", "Additional media file is too large. Maximum size is 10MB.", (value) => {
+      if (!value || value.length === 0) return true; // Pass if no file (not required)
+      return value[0].size <= 10 * 1024 * 1024; // 10MB limit
+    }),
   privacy: yup.boolean().oneOf([true], "You must accept the privacy policy").required(),
 });

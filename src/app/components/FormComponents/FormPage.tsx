@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userSchema } from "@/app/utils/validationSchema";
 import { useSubmitForm } from "@/app/hooks/useSubmitForm";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from 'next/navigation';
 import * as yup from "yup";
 
 export default function FormPage() {
@@ -20,6 +20,8 @@ export default function FormPage() {
 
   const { submitForm, submitted, error, loading } = useSubmitForm();
   const router = useRouter();
+  // const searchParams = useSearchParams();
+  // const jobsTitle = searchParams.get('jobsTitle');
 
   const onSubmit = async (data: yup.InferType<typeof userSchema>) => {
     const result = await submitForm(data);
@@ -197,6 +199,9 @@ export default function FormPage() {
               {...register("additionalMedia")}
               className="input lg:text-[20px]"
             />
+               <p className="text-red-500 text-sm lg:text-[20px]">
+              {errors.additionalMedia?.message}
+            </p>
           </div>
 
           {/* Privacy Policy */}
