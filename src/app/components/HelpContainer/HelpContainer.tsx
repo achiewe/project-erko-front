@@ -29,7 +29,7 @@ export default function HelpContainer() {
     }
   };
 
-  return (
+return (
     <div
       className="flex flex-row items-start sm:justify-center justify-start w-full h-full gap-y-10 flex-wrap bg-[#FFFFF0]
         border-r-2 border-b-2 border-gray-800 drop-shadow-[0px_0px_3px_rgba(0,0,0,0.40)] py-[20px] relative lg:h-[605px]"
@@ -38,11 +38,18 @@ export default function HelpContainer() {
         <div className="text-green-600 text-lg font-semibold text-center flex justify-center items-center h-full w-full">
           ✅ Form submitted successfully! Redirecting...
         </div>
+      ) : loading ? (
+        <div className="flex justify-center items-center h-full w-full">
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            <p className="mt-4 text-lg font-semibold">Submitting...</p>
+          </div>
+        </div>
       ) : (
         <div className="w-full flex flex-col items-center gap-[15px]">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col w-full h-full px-4 gap-4"
+            className="flex flex-col w-full h-full px-4 gap-4 mb-10 lg:mb-20"
           >
             {/* Tell us Help */}
             <div>
@@ -52,6 +59,7 @@ export default function HelpContainer() {
               <textarea
                 {...register("tellUsHelp")}
                 className="w-full pl-2 border border-black outline-none h-20 rounded-md lg:text-[20px]"
+                disabled={loading} // Disable during loading
               ></textarea>
               <p className="text-red-500 text-sm">
                 {errors.tellUsHelp?.message}
@@ -66,21 +74,24 @@ export default function HelpContainer() {
                 type="file"
                 {...register("additionalHelpMedia")}
                 className="w-full lg:text-[20px]"
+                disabled={loading} // Disable during loading
               />
             </div>
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-2 bg-blue-500 text-white rounded-md lg:text-[20px]"
+              className={`w-full py-2 bg-blue-500 text-white rounded-md lg:text-[20px] ${
+                loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
               disabled={loading} // Disable button while loading
             >
               {loading ? "Submitting..." : "Submit"}
             </button>
             {error && <p className="text-red-500 text-sm">{error}</p>}
           </form>
+          <CreativityTxtDiv text="Thanks for your patience! We’ll get back to you ASAP." />
         </div>
       )}
-      <CreativityTxtDiv text="Thanks for your patience! We’ll get back to you ASAP." />
     </div>
   );
 }
