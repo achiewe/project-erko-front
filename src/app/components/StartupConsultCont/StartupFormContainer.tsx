@@ -155,7 +155,7 @@ export default function StartupFormContainer() {
               <input
                 type="file"
                 {...register("projectPresentation")}
-                className="w-full lg:text-[20px]"
+                className="w-full lg:text-[20px] lg:mb-2"
                 disabled={openModal || loading} // Disable during loading
               />
               <p className="text-red-500 text-sm lg:text-[20px]">
