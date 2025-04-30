@@ -2,7 +2,7 @@ import FormButton from "@/app/components/FormComponents/FormButton";
 import FormPage from "@/app/components/FormComponents/FormPage";
 import Header from "@/app/components/Header/Header";
 import Wrapper from "@/app/shared/Wrapper";
-import React from "react";
+import React, { Suspense } from "react";
 
 export default function page() {
   return (
@@ -16,7 +16,9 @@ export default function page() {
           h-full h-mn:gap-y-[0px] h-sm:gap-y-[10px] h-mm:pt-[0px] gap-y-[40px] flex-wrap gap-x-[50px] bg-[#FFFFF0] 
           border-r-2 border-b-2 border-gray-800 drop-shadow-[0px_0px_3px_rgba(0,0,0,0.40)] py-[20px] relative"
           >
-            <FormPage />
+           <Suspense fallback={<div>Loading...</div>}>
+              <FormPage />
+            </Suspense>
           </div>
         </div>
       </div>
